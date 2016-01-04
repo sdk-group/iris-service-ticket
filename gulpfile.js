@@ -46,7 +46,7 @@ gulp.task("es6-js", function() {
 });
 
 gulp.task("json", function() {
-	return gulp.src(["src/**/*.json"])
+	return gulp.src(["src/**/*.json", "tests/**/*.json"])
 		.pipe(gulp.dest("build"));
 });
 
