@@ -1,7 +1,7 @@
 'use strict'
 
 let emitter = require("global-queue");
-let IrisWorkflow = require('resource-managment-framework').IrisWorkflow;
+let TicketApi = require('resource-managment-framework').TicketApi;
 
 class Ticket {
 	constructor() {
@@ -10,7 +10,7 @@ class Ticket {
 
 	init(config) {
 		let bname = config.bucket;
-		this.iris = new IrisWorkflow();
+		this.iris = new TicketApi();
 		this.iris.init(bname);
 	}
 
