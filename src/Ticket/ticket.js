@@ -1,7 +1,7 @@
 'use strict'
 
 let emitter = require("global-queue");
-let TicketApi = require('resource-managment-framework').TicketApi;
+let TicketApi = require('resource-management-framework').TicketApi;
 
 class Ticket {
 	constructor() {
@@ -9,9 +9,8 @@ class Ticket {
 	}
 
 	init(config) {
-		let bname = config.bucket;
 		this.iris = new TicketApi();
-		this.iris.init(bname);
+		this.iris.initContent();
 	}
 
 	//API
@@ -24,7 +23,9 @@ class Ticket {
 				return this.iris.setTicket(tick);
 			});
 	}
+
 	removeTicket(ticket, reason) {}
+
 	getByPIN(pin) {
 		return this.iris.getTicket({
 				query: {
@@ -35,6 +36,7 @@ class Ticket {
 				return _.values(res);
 			});
 	}
+
 	getById(id) {
 		return this.iris.getTicket({
 				keys: id.toString()
@@ -43,7 +45,9 @@ class Ticket {
 				return _.values(res);
 			});
 	}
+
 	getHistory(ticket) {}
+
 	changePriority(ticket, priority_level, reason) {
 		return this.getById(ticket)
 			.then((ticket_data) => {
@@ -53,6 +57,7 @@ class Ticket {
 				return this.iris.setTicket(tick);
 			});
 	}
+
 	setRoute(route) {}
 }
 
