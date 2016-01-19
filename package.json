@@ -4,7 +4,7 @@
 	"description": "iris ticket service",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha",
+		"test": "mocha ./build/**/*.test.js -r ./build/index.js",
 		"install": "gulp --gulpfile build.js"
 	},
 	"repository": {
@@ -14,6 +14,10 @@
 	"keywords": [
 		"iris"
 	],
+	"babel": {
+		"presets": ["node5"],
+		"babelrc": false
+	},
 	"author": "...",
 	"license": "ISC",
 	"bugs": {
@@ -21,6 +25,7 @@
 	},
 	"homepage": "https://github.com/sdk-group/iris-service-ticket#readme",
 	"devDependencies": {
+		"babel-preset-node5": "^10.3.0",
 		"chai": "^3.3.0",
 		"gulp": "^3.9.0",
 		"gulp-babel": "^5.1.0",
