@@ -11,35 +11,36 @@ let events = {
 	}
 }
 
-let tasks = [{
-			// 	name: events.queue.ticket.change_state,
-			// 	handler: 'changeState'
-			// }, {
-			// 	name: events.queue.ticket.get_by_id,
-			// 	handler: 'getById'
-			// }, {
-			// 	name: events.queue.ticket.get_by_pin,
-			// 	handler: 'getByPIN'
-			// }, {
-			// 	name: events.queue.ticket.get_history,
-			// 	handler: 'getHistory'
-			// }, {
-			// 	name: events.queue.ticket.change_priority,
-			// 	handler: 'changePriority'
-			// }, {
-			// 	name: events.queue.ticket.set_route,
-			// 	handler: 'setRoute'
-			// }
-		]
+let tasks = [
+	// {
+	// 	name: events.queue.ticket.change_state,
+	// 	handler: 'changeState'
+	// }, {
+	// 	name: events.queue.ticket.get_by_id,
+	// 	handler: 'getById'
+	// }, {
+	// 	name: events.queue.ticket.get_by_pin,
+	// 	handler: 'getByPIN'
+	// }, {
+	// 	name: events.queue.ticket.get_history,
+	// 	handler: 'getHistory'
+	// }, {
+	// 	name: events.queue.ticket.change_priority,
+	// 	handler: 'changePriority'
+	// }, {
+	// 	name: events.queue.ticket.set_route,
+	// 	handler: 'setRoute'
+	// }
+]
 
 
-		module.exports = {
-			module: require('./ticket.js'),
-			permissions: [],
-			exposed: true,
-			tasks: tasks,
-			events: {
-				group: 'queue',
-				shorthands: events.queue.ticket
-			}
-		};
+module.exports = {
+	module: require('./ticket.js'),
+	permissions: [],
+	exposed: true,
+	tasks: tasks,
+	events: {
+		group: 'queue',
+		shorthands: events.queue.ticket
+	}
+};
