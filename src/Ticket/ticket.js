@@ -8,7 +8,7 @@ class Ticket {
 		this.emitter = emitter;
 	}
 
-	init(config) {
+	init() {
 		this.iris = new TicketApi();
 		this.iris.initContent();
 	}

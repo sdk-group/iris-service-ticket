@@ -8,9 +8,7 @@ describe("Ticket service", () => {
 	let bucket = null;
 	before(() => {
 		service = new Ticket();
-		service.init({
-			bucket: config.buckets.main
-		});
+		service.init();
 	});
 	describe("Ticket service", () => {
 		it("should get a ticket by code", (done) => {
