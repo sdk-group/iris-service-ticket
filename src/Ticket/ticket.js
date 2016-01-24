@@ -14,6 +14,21 @@ class Ticket {
 	}
 
 	//API
+	logHistory(data) {
+		return this.emitter.addTask('history', {
+			_action: 'set-entries',
+			data
+		});
+	}
+
+	actionTicket({
+		query
+	}) {
+		return this.iris.getTicket({
+			query
+		});
+	}
+
 	actionCallAgain({
 		user_id, ticket
 	}) {
@@ -31,10 +46,7 @@ class Ticket {
 						ticket: tick[ticket]
 					}
 				});
-				return this.emitter.addTask('history', {
-					_action: 'set-entries',
-					data
-				});
+				return this.logHistory(data);
 			});
 	}
 
@@ -50,6 +62,7 @@ class Ticket {
 			"called=>processing": true,
 			"processing=>closed": true
 		};
+		let data = {};
 		return this.iris.getTicket({
 				keys: ticket
 			})
@@ -62,22 +75,20 @@ class Ticket {
 				return this.iris.setTicket(data);
 			})
 			.then((res) => {
-				return {
-					success: !!(res[ticket] && res[ticket].cas)
-				};
+				if(!(res[ticket] && res[ticket].cas))
+					return Promise.reject(new Error("Failed to set ticket state."));
+				return this.logHistory(data);
 			})
 			.catch((err) => {
 				return {
-					success: false
+					success: false,
+					reason: err.message
 				};
 			});
 	}
 
-	removeTicket({
-		ticket, reason
-	}) {}
 
-	actionByCode({
+	actionByPin({
 		code
 	}) {
 		return this.iris.getTicket({
@@ -127,14 +138,12 @@ class Ticket {
 			.then((res) => {
 				if(!res[ticket].cas)
 					return Promise.reject(new Error("Failed to set ticket priority."));
-				return this.emitter.addTask('history', {
-					_action: 'set-entries',
-					data
-				});
+				return this.logHistory(data);
 			})
 			.catch((err) => {
 				return {
-					success: false;
+					success: false,
+					reason: err.message
 				}
 			});
 	}
