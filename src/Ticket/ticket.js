@@ -29,6 +29,19 @@ class Ticket {
 		});
 	}
 
+	actionComputePriority({
+		priority
+	}) {
+		let p_map = {
+			'veteran': 3,
+			'invalid': 2
+		};
+		let req = priority ? _.pick(p_map, _.keys(priority)) : {
+			'default': 0
+		};
+		return _.max(_.values(req));
+	}
+
 	actionCallAgain({
 		user_id, ticket
 	}) {
