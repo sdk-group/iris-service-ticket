@@ -22,10 +22,10 @@ class Ticket {
 	}
 
 	actionTicket({
-		query
+		query, keys
 	}) {
 		return this.iris.getTicket({
-			query
+			query, keys
 		});
 	}
 
