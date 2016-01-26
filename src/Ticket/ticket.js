@@ -125,7 +125,7 @@ class Ticket {
 			});
 	}
 
-	getHistory({
+	actionHistory({
 		ticket
 	}) {
 		return this.emitter.addTask('history', {
@@ -133,6 +133,15 @@ class Ticket {
 			object: ticket
 		});
 	}
+
+	actionHistoryByCode({
+		code
+	}) {
+		return this.emitter.addTask('history', {
+			_action: 'get-entries'
+		});
+	}
+
 
 	actionSetPriority({
 		ticket, priority, reason
