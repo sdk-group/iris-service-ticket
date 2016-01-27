@@ -39,7 +39,7 @@ class Ticket {
 		let req = priority ? _.pick(p_map, _.keys(priority)) : {
 			'default': 0
 		};
-		return _.max(_.values(req));
+		return _.max(_.values(req)) || 0;
 	}
 
 	actionCallAgain({
