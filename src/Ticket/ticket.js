@@ -29,6 +29,8 @@ class Ticket {
 		});
 	}
 
+
+
 	actionComputePriority({
 		priority
 	}) {
@@ -52,9 +54,9 @@ class Ticket {
 				keys: ticket
 			})
 			.then((tick) => {
+
 				this.emitter.emit('broadcast', {
-					module: 'ticket',
-					event: 'call',
+					event: 'ticket.call',
 					data: {
 						ticket: tick[ticket]
 					}
@@ -101,7 +103,7 @@ class Ticket {
 	}
 
 
-	actionByPin({
+	actionByCode({
 		code
 	}) {
 		return this.iris.getTicket({
@@ -133,15 +135,6 @@ class Ticket {
 			object: ticket
 		});
 	}
-
-	actionHistoryByCode({
-		code
-	}) {
-		return this.emitter.addTask('history', {
-			_action: 'get-entries'
-		});
-	}
-
 
 	actionSetPriority({
 		ticket, priority, reason
