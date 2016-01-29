@@ -77,7 +77,10 @@ class Ticket {
 			"called=>processing": true,
 			"processing=>closed": true
 		};
-		let data = {};
+		let data = {
+			event_name: "ticket.change-state",
+			reason
+		};
 		return this.iris.getTicket({
 				keys: ticket
 			})
