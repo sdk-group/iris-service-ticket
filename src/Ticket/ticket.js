@@ -58,7 +58,7 @@ class Ticket {
 				this.emitter.emit('broadcast', {
 					event: 'ticket.call',
 					data: {
-						ticket: tick[ticket]
+						ticket: _.values(tick)
 					}
 				});
 				return this.logHistory(data);
