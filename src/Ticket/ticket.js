@@ -61,13 +61,14 @@ class Ticket {
 						ticket: _.values(tick)
 					}
 				});
+
 				return this.logHistory(data);
 			});
 	}
 
 
 	actionChangeState({
-		ticket, state, reason = 'system'
+		ticket, state, reason = 'system', user_id
 	}) {
 		let allowed_transform = {
 			"registered=>called": true,
@@ -79,13 +80,15 @@ class Ticket {
 		};
 		let data = {
 			event_name: "ticket.change-state",
+			subject: user_id,
 			reason
 		};
 		return this.iris.getTicket({
 				keys: ticket
 			})
 			.then((tick) => {
-				let data = tick[ticket];
+				console.log("FOUND TO CHANGE", tick, ticket);
+				let data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
 				let old_state = data.state;
 				if(!(state === old_state) && !allowed_transform[_.join([old_state, state], "=>")])
 					return Promise.reject(new Error("State change not allowed."));
