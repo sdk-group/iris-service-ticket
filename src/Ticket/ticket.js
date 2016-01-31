@@ -45,25 +45,15 @@ class Ticket {
 	}
 
 	actionCallAgain({
-		user_id, ticket
+		user_id, ticket, workstation
 	}) {
 		let data = {
 
 		};
-		return this.iris.getTicket({
-				keys: ticket
-			})
-			.then((tick) => {
 
-				this.emitter.emit('broadcast', {
-					event: 'ticket.call',
-					data: {
-						ticket: _.values(tick)
-					}
-				});
 
-				return this.logHistory(data);
-			});
+
+		return this.logHistory(data);
 	}
 
 
