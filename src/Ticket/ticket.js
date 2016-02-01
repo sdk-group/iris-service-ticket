@@ -50,10 +50,12 @@ class Ticket {
 		let data = {
 
 		};
-
-
-
-		return this.logHistory(data);
+		return this.actionChangeState({
+				ticket, state: 'called', user_id
+			})
+			.then((res) => {
+				return this.logHistory(data);
+			});
 	}
 
 
@@ -77,18 +79,25 @@ class Ticket {
 				keys: ticket
 			})
 			.then((tick) => {
-				console.log("FOUND TO CHANGE", tick, ticket);
 				let data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
 				let old_state = data.state;
-				if(!(state === old_state) && !allowed_transform[_.join([old_state, state], "=>")])
+				if(state === old_state)
+					return Promise.resolve({
+						ticket: tick,
+						log: false
+					});
+				if(!allowed_transform[_.join([old_state, state], "=>")])
 					return Promise.reject(new Error("State change not allowed."));
 				data.state = state;
-				return this.iris.setTicket(data);
+				return({
+					ticket: this.iris.setTicket(data),
+					log: this.logHistory(data)
+				});
 			})
-			.then((res) => {
-				if(!(res[ticket] && res[ticket].cas))
-					return Promise.reject(new Error("Failed to set ticket state."));
-				return this.logHistory(data);
+			.then(() => {
+				return {
+					success: true
+				};
 			})
 			.catch((err) => {
 				return {
