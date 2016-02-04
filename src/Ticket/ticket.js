@@ -22,10 +22,12 @@ class Ticket {
 	}
 
 	actionTicket({
-		query, keys
+		query,
+		keys
 	}) {
 		return this.iris.getTicket({
-			query, keys
+			query,
+			keys
 		});
 	}
 
@@ -45,13 +47,17 @@ class Ticket {
 	}
 
 	actionCallAgain({
-		user_id, ticket, workstation
+		user_id,
+		ticket,
+		workstation
 	}) {
 		let data = {
 
 		};
 		return this.actionChangeState({
-				ticket, state: 'called', user_id
+				ticket,
+				state: 'called',
+				user_id
 			})
 			.then((res) => {
 				return this.logHistory(data);
@@ -60,42 +66,50 @@ class Ticket {
 
 
 	actionChangeState({
-		ticket, state, reason = 'system', user_id
+		ticket,
+		state,
+		reason = 'system',
+		user_id
 	}) {
 		let allowed_transform = {
 			"registered=>called": true,
+			"postponed=>called": true,
 			"booked=>registered": true,
 			"called=>postponed": true,
 			"postponed=>registered": true,
 			"called=>processing": true,
-			"processing=>closed": true
+			"processing=>closed": true,
+			"processing=>postponed": true
 		};
 		let data = {
 			event_name: "ticket.change-state",
 			subject: user_id,
 			reason
 		};
+		let tick_data;
 		return this.iris.getTicket({
 				keys: ticket
 			})
 			.then((tick) => {
-				let data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
-				let old_state = data.state;
+				tick_data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
+				let old_state = tick_data.state;
 				if(state === old_state)
 					return Promise.resolve({
-						ticket: tick,
+						ticket: tick_data,
 						log: false
 					});
 				if(!allowed_transform[_.join([old_state, state], "=>")])
 					return Promise.reject(new Error("State change not allowed."));
-				data.state = state;
+				tick_data.state = state;
+
 				return({
-					ticket: this.iris.setTicket(data),
+					ticket: this.iris.setTicket(tick_data),
 					log: this.logHistory(data)
 				});
 			})
 			.then(() => {
 				return {
+					ticket: tick_data,
 					success: true
 				};
 			})
@@ -142,7 +156,9 @@ class Ticket {
 	}
 
 	actionSetPriority({
-		ticket, priority, reason
+		ticket,
+		priority,
+		reason
 	}) {
 		let data = {
 
