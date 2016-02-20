@@ -1,7 +1,8 @@
 'use strict'
 
 let emitter = require("global-queue");
-let TicketApi = require('resource-management-framework').TicketApi;
+let TicketApi = require('resource-management-framework')
+	.TicketApi;
 
 class Ticket {
 	constructor() {
@@ -15,10 +16,7 @@ class Ticket {
 
 	//API
 	logHistory(data) {
-		return this.emitter.addTask('history', {
-			_action: 'set-entries',
-			data
-		});
+		return Promise.resolve(data);
 	}
 
 	actionTicket({
@@ -93,16 +91,16 @@ class Ticket {
 			.then((tick) => {
 				tick_data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
 				let old_state = tick_data.state;
-				if(state === old_state)
+				if (state === old_state)
 					return Promise.resolve({
 						ticket: tick_data,
 						log: false
 					});
-				if(!allowed_transform[_.join([old_state, state], "=>")])
+				if (!allowed_transform[_.join([old_state, state], "=>")])
 					return Promise.reject(new Error("State change not allowed."));
 				tick_data.state = state;
 
-				return({
+				return ({
 					ticket: this.iris.setTicket(tick_data),
 					log: this.logHistory(data)
 				});
@@ -172,7 +170,7 @@ class Ticket {
 				return this.iris.setTicket(tick);
 			})
 			.then((res) => {
-				if(!res[ticket].cas)
+				if (!res[ticket].cas)
 					return Promise.reject(new Error("Failed to set ticket priority."));
 				return this.logHistory(data);
 			})
