@@ -153,6 +153,29 @@ class Ticket {
 		});
 	}
 
+	actionSetTicket({
+		ticket
+	}) {
+		let data = {
+
+		};
+		return this.iris.setTicket(ticket)
+			.then((res) => {
+				if (!res[ticket.id].cas)
+					return Promise.reject(new Error("Failed to set ticket booking date."));
+				return {
+					success: true,
+					ticket
+				};
+			})
+			.catch((err) => {
+				return {
+					success: false,
+					reason: err.message
+				}
+			});
+	}
+
 	actionSetPriority({
 		ticket,
 		priority,
@@ -165,14 +188,13 @@ class Ticket {
 				keys: ticket
 			})
 			.then((res) => {
-				let tick = res[ticket];
+				let tick = _.find(res, (t) => (t.id == ticket || t.key == ticket));
 				tick.priority = priority_level;
 				return this.iris.setTicket(tick);
 			})
 			.then((res) => {
 				if (!res[ticket].cas)
 					return Promise.reject(new Error("Failed to set ticket priority."));
-				return this.logHistory(data);
 			})
 			.catch((err) => {
 				return {
