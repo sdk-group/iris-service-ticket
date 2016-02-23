@@ -15,10 +15,6 @@ class Ticket {
 	}
 
 	//API
-	logHistory(data) {
-		return Promise.resolve(data);
-	}
-
 	actionTicket({
 		query,
 		keys
@@ -49,17 +45,11 @@ class Ticket {
 		ticket,
 		workstation
 	}) {
-		let data = {
-
-		};
 		return this.actionChangeState({
-				ticket,
-				state: 'called',
-				user_id
-			})
-			.then((res) => {
-				return this.logHistory(data);
-			});
+			ticket,
+			state: 'called',
+			user_id
+		});
 	}
 
 
@@ -79,11 +69,6 @@ class Ticket {
 			"processing=>closed": true,
 			"processing=>postponed": true
 		};
-		let data = {
-			event_name: "ticket.change-state",
-			subject: user_id,
-			reason
-		};
 		let tick_data;
 		return this.iris.getTicket({
 				keys: ticket
@@ -100,10 +85,7 @@ class Ticket {
 					return Promise.reject(new Error("State change not allowed."));
 				tick_data.state = state;
 
-				return ({
-					ticket: this.iris.setTicket(tick_data),
-					log: this.logHistory(data)
-				});
+				return this.iris.setTicket(tick_data);
 			})
 			.then(() => {
 				return {
@@ -148,17 +130,19 @@ class Ticket {
 		ticket
 	}) {
 		return this.emitter.addTask('history', {
-			_action: 'get-entries',
-			object: ticket
-		});
+				_action: 'get-entries',
+				query: {
+					object: ticket
+				}
+			})
+			.then((res) => {
+				return _.values(res);
+			});
 	}
 
 	actionSetTicket({
 		ticket
 	}) {
-		let data = {
-
-		};
 		return this.iris.setTicket(ticket)
 			.then((res) => {
 				if (!res[ticket.id].cas)
@@ -178,8 +162,7 @@ class Ticket {
 
 	actionSetPriority({
 		ticket,
-		priority,
-		reason
+		priority
 	}) {
 		let data = {
 
