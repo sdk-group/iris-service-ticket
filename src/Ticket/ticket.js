@@ -40,10 +40,9 @@ class Ticket {
 		return _.max(_.values(req)) || 0;
 	}
 
-	actionCallAgain({
+	actionCallTicket({
 		user_id,
-		ticket,
-		workstation
+		ticket
 	}) {
 		return this.actionChangeState({
 			ticket,
@@ -56,7 +55,6 @@ class Ticket {
 	actionChangeState({
 		ticket,
 		state,
-		reason = 'system',
 		user_id
 	}) {
 		let allowed_transform = {
@@ -67,6 +65,11 @@ class Ticket {
 			"postponed=>registered": true,
 			"called=>processing": true,
 			"processing=>closed": true,
+			"booked=>removed": true,
+			"registered=>removed": true,
+			"called=>removed": true,
+			"called=>expired": true,
+			"booked=>expired": true,
 			"processing=>postponed": true
 		};
 		let tick_data;
@@ -81,7 +84,7 @@ class Ticket {
 						ticket: tick_data,
 						log: false
 					});
-				if (!allowed_transform[_.join([old_state, state], "=>")])
+				if (!allowed_transform[_.join([old_state, state], "=>")] && !allowed_transform[_.join(['*', state], "=>")])
 					return Promise.reject(new Error("State change not allowed."));
 				tick_data.state = state;
 
