@@ -47,14 +47,17 @@ class Ticket {
 		return this.actionChangeState({
 			ticket,
 			state: 'called',
-			user_id
+			fields: {
+				operator: user_id
+			}
 		});
 	}
 
 
 	actionChangeState({
 		ticket,
-		state
+		state,
+		fields = {}
 	}) {
 		let allowed_transform = {
 			"registered=>called": true,
@@ -86,7 +89,7 @@ class Ticket {
 				if(!allowed_transform[_.join([old_state, state], "=>")] && !allowed_transform[_.join(['*', state], "=>")])
 					return Promise.reject(new Error("State change not allowed."));
 				tick_data.state = state;
-
+				tick_data = _.merge(tick_data, fields);
 				return this.iris.setTicket(tick_data);
 			})
 			.then(() => {
@@ -148,7 +151,7 @@ class Ticket {
 		return this.iris.setTicket(ticket)
 			.then((res) => {
 				if(!res[ticket.id].cas)
-					return Promise.reject(new Error("Failed to set ticket booking date."));
+					return Promise.reject(new Error("Failed to set ticket."));
 				return {
 					success: true,
 					ticket
