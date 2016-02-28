@@ -79,12 +79,12 @@ class Ticket {
 			.then((tick) => {
 				tick_data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
 				let old_state = tick_data.state;
-				if (state === old_state)
+				if(state === old_state)
 					return Promise.resolve({
 						ticket: tick_data,
 						log: false
 					});
-				if (!allowed_transform[_.join([old_state, state], "=>")] && !allowed_transform[_.join(['*', state], "=>")])
+				if(!allowed_transform[_.join([old_state, state], "=>")] && !allowed_transform[_.join(['*', state], "=>")])
 					return Promise.reject(new Error("State change not allowed."));
 				tick_data.state = state;
 
@@ -148,7 +148,7 @@ class Ticket {
 	}) {
 		return this.iris.setTicket(ticket)
 			.then((res) => {
-				if (!res[ticket.id].cas)
+				if(!res[ticket.id].cas)
 					return Promise.reject(new Error("Failed to set ticket booking date."));
 				return {
 					success: true,
@@ -167,9 +167,6 @@ class Ticket {
 		ticket,
 		priority
 	}) {
-		let data = {
-
-		};
 		return this.iris.getTicket({
 				keys: ticket
 			})
@@ -179,7 +176,7 @@ class Ticket {
 				return this.iris.setTicket(tick);
 			})
 			.then((res) => {
-				if (!res[ticket].cas)
+				if(!res[ticket].cas)
 					return Promise.reject(new Error("Failed to set ticket priority."));
 			})
 			.catch((err) => {
