@@ -54,8 +54,7 @@ class Ticket {
 
 	actionChangeState({
 		ticket,
-		state,
-		user_id
+		state
 	}) {
 		let allowed_transform = {
 			"registered=>called": true,
