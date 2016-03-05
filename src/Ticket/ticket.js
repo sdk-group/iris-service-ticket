@@ -87,7 +87,7 @@ class Ticket {
 						log: false
 					});
 				if (!allowed_transform[_.join([old_state, state], "=>")] && !allowed_transform[_.join(['*', state], "=>")])
-					return Promise.reject(new Error("State change not allowed."));
+					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
 				tick_data = _.merge(tick_data, fields);
 				return this.iris.setTicket(tick_data);
