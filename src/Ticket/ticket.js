@@ -26,7 +26,6 @@ class Ticket {
 	}
 
 
-
 	actionComputePriority({
 		priority
 	}) {
@@ -101,6 +100,7 @@ class Ticket {
 			.catch((err) => {
 				return {
 					success: false,
+					ticket: tick_data,
 					reason: err.message
 				};
 			});
@@ -134,15 +134,12 @@ class Ticket {
 	actionHistory({
 		ticket
 	}) {
-		return this.emitter.addTask('history', {
-				_action: 'get-entries',
-				query: {
-					object: ticket,
-					event_name: ['call', 'register', 'book', 'remove', 'restore', 'closed', 'postpone', 'expire', 'processing']
-				}
+		let events = ['call', 'register', 'book', 'remove', 'restore', 'closed', 'postpone', 'expire', 'processing'];
+		return this.iris.getTicket({
+				keys: ticket
 			})
 			.then((res) => {
-				return _.values(res);
+				return _.filter(_.get(res, `${ticket}.history`), (ent) => !!~_.indexOf(events, ent.event_name));
 			});
 	}
 
