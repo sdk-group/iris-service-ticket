@@ -25,33 +25,9 @@ class Ticket {
 		});
 	}
 
-
-	actionComputePriority({
-		priority
-	}) {
-		let p_map = {
-			'veteran': 3,
-			'invalid': 2
-		};
-		let req = priority ? _.pick(p_map, _.keys(priority)) : {
-			'default': 0
-		};
-		return _.max(_.values(req)) || 0;
+	actionBasicPriorities() {
+		return this.iris.getBasicPriorities();
 	}
-
-	actionCallTicket({
-		user_id,
-		ticket
-	}) {
-		return this.actionChangeState({
-			ticket,
-			state: 'called',
-			fields: {
-				operator: user_id
-			}
-		});
-	}
-
 
 	actionChangeState({
 		ticket,
@@ -154,30 +130,6 @@ class Ticket {
 					success: true,
 					ticket
 				};
-			})
-			.catch((err) => {
-				return {
-					success: false,
-					reason: err.message
-				}
-			});
-	}
-
-	actionSetPriority({
-		ticket,
-		priority
-	}) {
-		return this.iris.getTicket({
-				keys: ticket
-			})
-			.then((res) => {
-				let tick = _.find(res, (t) => (t.id == ticket || t.key == ticket));
-				tick.priority = priority_level;
-				return this.iris.setTicket(tick);
-			})
-			.then((res) => {
-				if (!res[ticket].cas)
-					return Promise.reject(new Error("Failed to set ticket priority."));
 			})
 			.catch((err) => {
 				return {
