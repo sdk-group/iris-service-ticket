@@ -57,10 +57,7 @@ class Ticket {
 				tick_data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
 				let old_state = tick_data.state;
 				if (state === old_state && state == 'registered')
-					return Promise.resolve({
-						ticket: tick_data,
-						log: false
-					});
+					return tick;
 				if (!allowed_transform[_.join([old_state, state], "=>")] && !allowed_transform[_.join(['*', state], "=>")])
 					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
@@ -68,7 +65,7 @@ class Ticket {
 				return this.iris.setTicket(tick_data);
 			})
 			.then((res) => {
-				// console.log("SET TICK RES", res);
+				console.log("SET TICK RES", res);
 				if (!res[tick_data.id])
 					return Promise.reject(new Error(`Failed to change state.`));
 				tick_data.cas = res[tick_data.id].cas;
@@ -78,7 +75,7 @@ class Ticket {
 				};
 			})
 			.catch((err) => {
-				// console.log("ERR CHANGE STATE", err.message, tick_data);
+				console.log("ERR CHANGE STATE", err.message, tick_data);
 				return {
 					success: false,
 					ticket: tick_data,
