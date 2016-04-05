@@ -56,11 +56,11 @@ class Ticket {
 			.then((tick) => {
 				tick_data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
 				let old_state = tick_data.state;
-				// if (state === old_state)
-				// 	return Promise.resolve({
-				// 		ticket: tick_data,
-				// 		log: false
-				// 	});
+				if (state === old_state && state == 'registered')
+					return Promise.resolve({
+						ticket: tick_data,
+						log: false
+					});
 				if (!allowed_transform[_.join([old_state, state], "=>")] && !allowed_transform[_.join(['*', state], "=>")])
 					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
