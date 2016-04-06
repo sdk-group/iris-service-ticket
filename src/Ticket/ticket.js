@@ -88,12 +88,15 @@ class Ticket {
 	actionByCode({
 		code
 	}) {
-		return this.iris.getTicket({
-				query: {
-					code
-				}
+		return this.iris.getCodeLookup(code)
+			.then((res) => {
+				console.log(res);
+				return this.iris.getTicket({
+					keys: res
+				});
 			})
 			.then((res) => {
+				console.log("BYCODE", res);
 				return _.values(res);
 			});
 	}
