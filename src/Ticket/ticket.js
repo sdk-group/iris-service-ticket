@@ -96,7 +96,7 @@ class Ticket {
 				});
 			})
 			.then((res) => {
-				console.log("BYCODE", res);
+				// console.log("BYCODE", res);
 				return _.values(res);
 			});
 	}
