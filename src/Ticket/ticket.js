@@ -1,12 +1,12 @@
 'use strict'
 
-let emitter = require("global-queue");
+
 let TicketApi = require('resource-management-framework')
 	.TicketApi;
 
 class Ticket {
 	constructor() {
-		this.emitter = emitter;
+		this.emitter = message_bus;
 	}
 
 	init() {
