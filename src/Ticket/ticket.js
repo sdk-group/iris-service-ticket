@@ -54,7 +54,7 @@ class Ticket {
 				keys: ticket
 			})
 			.then((tick) => {
-				tick_data = _.find(tick, (t) => (t.id == ticket || t.key == ticket));
+				tick_data = _.find(tick, (t) => (t.id == ticket));
 				let old_state = tick_data.state;
 				if (state === old_state && state == 'registered')
 					return tick;
