@@ -91,6 +91,9 @@ class Ticket {
 		return this.iris.getCodeLookup(code)
 			.then((res) => {
 				console.log(res);
+				if (!res) {
+					return Promise.resolve({});
+				}
 				return this.iris.getTicket({
 					keys: res
 				});
