@@ -81,7 +81,7 @@ class Ticket {
 				return this.iris.setTicket(tick_data);
 			})
 			.then((res) => {
-				console.log("SET TICK RES", res);
+				// console.log("SET TICK RES", res);
 				if (!res[tick_data.id])
 					return Promise.reject(new Error(`Failed to change state.`));
 				tick_data.cas = res[tick_data.id].cas;
@@ -91,7 +91,7 @@ class Ticket {
 				};
 			})
 			.catch((err) => {
-				console.log("ERR CHANGE STATE", err.message, tick_data);
+				console.log("ERR CHANGE STATE", err.message);
 				return {
 					success: false,
 					ticket: tick_data,
@@ -114,10 +114,7 @@ class Ticket {
 					keys: res
 				});
 			})
-			.then((res) => {
-				// console.log("BYCODE", res);
-				return _.values(res);
-			});
+			.then((res) => _.values(res));
 	}
 
 	actionById({
@@ -126,9 +123,7 @@ class Ticket {
 		return this.iris.getTicket({
 				keys: ticket
 			})
-			.then((res) => {
-				return _.values(res);
-			});
+			.then((res) => _.values(res));
 	}
 
 	actionHistory({
@@ -156,6 +151,12 @@ class Ticket {
 				};
 			})
 			.catch((err) => {
+				global.logger && logger.error(
+					err, {
+						module: 'ticket',
+						method: 'set-ticket',
+						ticket
+					});
 				return {
 					success: false,
 					reason: err.message
