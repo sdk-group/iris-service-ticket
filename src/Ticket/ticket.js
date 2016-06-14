@@ -15,7 +15,7 @@ class Ticket {
 	}
 
 	launch() {
-			this.emitter.listenTask('ticket.emit.state', ({
+			this.emitter.on('ticket.emit.state', ({
 				ticket,
 				org_addr,
 				workstation,
