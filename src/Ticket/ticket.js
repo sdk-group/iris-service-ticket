@@ -22,7 +22,7 @@ class Ticket {
 				event_name
 			}) => {
 				let to_join = ['ticket', event_name, org_addr, workstation];
-				console.log("EMITTING", _.join(to_join, "."));
+				console.log("EMITTING TICKSTATE", _.join(to_join, "."));
 				this.emitter.emit('broadcast', {
 					event: _.join(to_join, "."),
 					data: ticket
