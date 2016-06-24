@@ -38,19 +38,6 @@ class Ticket {
 		return this.iris.getTicket({
 			query,
 			keys
-		}).then(tickets => {
-			let ticket = _.head(tickets)
-			if (!ticket) {
-				return {
-					success: false,
-					reason: "Ticket not found"
-				};
-			}
-
-			return {
-				ticket: ticket,
-				success: true
-			}
 		});
 	}
 
@@ -127,7 +114,21 @@ class Ticket {
 					keys: res
 				});
 			})
-			.then((res) => _.values(res));
+			.then((res) => _.values(res))
+			.then(tickets => {
+				let ticket = _.head(tickets)
+				if (!ticket) {
+					return {
+						success: false,
+						reason: "Ticket not found"
+					};
+				}
+
+				return {
+					ticket: ticket,
+					success: true
+				}
+			});
 	}
 
 	actionById({
