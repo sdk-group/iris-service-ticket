@@ -114,9 +114,8 @@ class Ticket {
 					keys: res
 				});
 			})
-			.then((res) => _.values(res))
 			.then(tickets => {
-				let ticket = _.head(tickets)
+				let ticket = _.head(_.values(tickets));
 				if (!ticket) {
 					return {
 						success: false,
