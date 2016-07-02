@@ -48,7 +48,8 @@ class Ticket {
 	actionChangeState({
 		ticket,
 		state,
-		fields = {}
+		fields = {},
+		unset = []
 	}) {
 		let allowed_transform = {
 			"registered=>called": true,
@@ -63,7 +64,8 @@ class Ticket {
 			"called=>removed": true,
 			"called=>expired": true,
 			"booked=>expired": true,
-			"processing=>postponed": true
+			"processing=>postponed": true,
+			"processing=>registered": true
 		};
 		let tick_data;
 		return this.iris.getTicket({
@@ -78,6 +80,7 @@ class Ticket {
 					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
 				tick_data = _.merge(tick_data, fields);
+				_.map(unset, v => _.unset(tick_data, v));
 				return this.iris.setTicket(tick_data);
 			})
 			.then((res) => {
