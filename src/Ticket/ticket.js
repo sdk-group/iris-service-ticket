@@ -45,28 +45,39 @@ class Ticket {
 		return this.iris.getBasicPriorities();
 	}
 
+	actionCanChangeState({
+		from,
+		to
+	}) {
+		let allowed_transform = {
+			"registered=>called": true,
+			"registered=>removed": true,
+			"registered=>registered": true,
+			"postponed=>called": true,
+			"postponed=>registered": true,
+			"booked=>registered": true,
+			"booked=>removed": true,
+			"booked=>expired": true,
+			"called=>removed": true,
+			"called=>registered": true,
+			"called=>expired": true,
+			"called=>processing": true,
+			"called=>postponed": true,
+			"processing=>closed": true,
+			"processing=>postponed": true,
+			"processing=>registered": true
+		};
+
+		return !!allowed_transform[_.join([from, to], "=>")] && !allowed_transform[_.join(['*', to], "=>")];
+	}
+
 	actionChangeState({
 		ticket,
 		state,
 		fields = {},
 		unset = []
 	}) {
-		let allowed_transform = {
-			"registered=>called": true,
-			"postponed=>called": true,
-			"booked=>registered": true,
-			"called=>postponed": true,
-			"postponed=>registered": true,
-			"called=>processing": true,
-			"processing=>closed": true,
-			"booked=>removed": true,
-			"registered=>removed": true,
-			"called=>removed": true,
-			"called=>expired": true,
-			"booked=>expired": true,
-			"processing=>postponed": true,
-			"processing=>registered": true
-		};
+
 		let tick_data;
 		return this.iris.getTicket({
 				keys: ticket
@@ -74,19 +85,20 @@ class Ticket {
 			.then((tick) => {
 				tick_data = _.find(tick, (t) => (t.id == ticket));
 				let old_state = tick_data.state;
-				if (state === old_state && state == 'registered')
-					return tick;
-				if (!allowed_transform[_.join([old_state, state], "=>")] && !allowed_transform[_.join(['*', state], "=>")])
+				if (!this.actionCanChangeState({
+						from: old_state,
+						to: state
+					}))
 					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
-				tick_data = _.merge(tick_data, fields);
 				_.map(unset, v => _.unset(tick_data, v));
+				tick_data = _.merge(tick_data, fields);
 				return this.iris.setTicket(tick_data);
 			})
 			.then((res) => {
 				// console.log("SET TICK RES", res);
 				if (!res[tick_data.id])
-					return Promise.reject(new Error(`Failed to change state.`));
+					return Promise.reject(new Error(`Failed to change state: cannot save ticket.`));
 				tick_data.cas = res[tick_data.id].cas;
 				return {
 					ticket: tick_data,
