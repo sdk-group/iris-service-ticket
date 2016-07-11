@@ -91,7 +91,10 @@ class Ticket {
 					}))
 					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
-				_.map(unset, v => _.get(tick_data, ['locked_fields', v], false) && _.unset(tick_data, v));
+				_.map(unset, v => {
+					let lock = _.get(tick_data, ['locked_fields', v], false);
+					if (!lock) _.unset(tick_data, v);
+				});
 				tick_data = _.merge(tick_data, fields);
 				return this.iris.setTicket(tick_data);
 			})
