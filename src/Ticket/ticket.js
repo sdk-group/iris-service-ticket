@@ -93,7 +93,11 @@ class Ticket {
 				tick_data.state = state;
 				_.map(unset, v => {
 					let lock = _.get(tick_data, ['locked_fields', v], false);
-					if (!lock) _.unset(tick_data, v);
+					if (!lock) {
+						_.unset(tick_data, v);
+					} else {
+						tick_data[v] = lock;
+					}
 				});
 				tick_data = _.merge(tick_data, fields);
 				return this.iris.setTicket(tick_data);
