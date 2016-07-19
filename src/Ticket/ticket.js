@@ -47,7 +47,8 @@ class Ticket {
 
 	actionCanChangeState({
 		from,
-		to
+		to,
+		operation
 	}) {
 		let allowed_transform = {
 			"registered=>called": true,
@@ -67,7 +68,10 @@ class Ticket {
 			"processing=>postponed": true,
 			"processing=>registered": true
 		};
-
+		if (operation == 'activate') {
+			if (from == 'processing' || from == 'called' || from == 'postponed')
+				return false;
+		}
 		return !!allowed_transform[_.join([from, to], "=>")] && !allowed_transform[_.join(['*', to], "=>")];
 	}
 
@@ -75,7 +79,8 @@ class Ticket {
 		ticket,
 		state,
 		fields = {},
-		unset = []
+		unset = [],
+		unlock = []
 	}) {
 
 		let tick_data;
@@ -91,6 +96,9 @@ class Ticket {
 					}))
 					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
+				_.map(unlock, nm => {
+					_.unset(tick_data, ['locked_fields', nm]);
+				});
 				_.map(unset, v => {
 					let lock = _.get(tick_data, ['locked_fields', v], false);
 					if (!lock) {
