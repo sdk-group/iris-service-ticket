@@ -1,0 +1,1632 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'update' ]
+2 info using npm@3.7.3
+3 info using node@v6.1.0
+4 silly mapToRegistry name babel-plugin-remove-comments
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry uri https://registry.npmjs.org/babel-plugin-remove-comments
+8 silly mapToRegistry name babel-plugin-transform-remove-console
+9 silly mapToRegistry using default registry
+10 silly mapToRegistry registry https://registry.npmjs.org/
+11 silly mapToRegistry uri https://registry.npmjs.org/babel-plugin-transform-remove-console
+12 silly mapToRegistry name babel-plugin-transform-strict-mode
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/babel-plugin-transform-strict-mode
+16 silly mapToRegistry name babel-plugin-undeclared-variables-check
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/babel-plugin-undeclared-variables-check
+20 silly mapToRegistry name babel-preset-es2015
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/babel-preset-es2015
+24 silly mapToRegistry name babel-preset-es2015-node5
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry uri https://registry.npmjs.org/babel-preset-es2015-node5
+28 silly mapToRegistry name babel-preset-node5
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/babel-preset-node5
+32 silly mapToRegistry name chai
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry uri https://registry.npmjs.org/chai
+36 silly mapToRegistry name del
+37 silly mapToRegistry using default registry
+38 silly mapToRegistry registry https://registry.npmjs.org/
+39 silly mapToRegistry uri https://registry.npmjs.org/del
+40 silly mapToRegistry name gulp
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/gulp
+44 silly mapToRegistry name gulp-babel
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/gulp-babel
+48 silly mapToRegistry name gulp-changed
+49 silly mapToRegistry using default registry
+50 silly mapToRegistry registry https://registry.npmjs.org/
+51 silly mapToRegistry uri https://registry.npmjs.org/gulp-changed
+52 silly mapToRegistry name gulp-concat
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry https://registry.npmjs.org/
+55 silly mapToRegistry uri https://registry.npmjs.org/gulp-concat
+56 silly mapToRegistry name gulp-develop-server
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry uri https://registry.npmjs.org/gulp-develop-server
+60 silly mapToRegistry name gulp-livereload
+61 silly mapToRegistry using default registry
+62 silly mapToRegistry registry https://registry.npmjs.org/
+63 silly mapToRegistry uri https://registry.npmjs.org/gulp-livereload
+64 silly mapToRegistry name gulp-mocha
+65 silly mapToRegistry using default registry
+66 silly mapToRegistry registry https://registry.npmjs.org/
+67 silly mapToRegistry uri https://registry.npmjs.org/gulp-mocha
+68 silly mapToRegistry name gulp-nodemon
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry uri https://registry.npmjs.org/gulp-nodemon
+72 silly mapToRegistry name gulp-plumber
+73 silly mapToRegistry using default registry
+74 silly mapToRegistry registry https://registry.npmjs.org/
+75 silly mapToRegistry uri https://registry.npmjs.org/gulp-plumber
+76 silly mapToRegistry name gulp-sourcemaps
+77 silly mapToRegistry using default registry
+78 silly mapToRegistry registry https://registry.npmjs.org/
+79 silly mapToRegistry uri https://registry.npmjs.org/gulp-sourcemaps
+80 silly mapToRegistry name gulp-uglify
+81 silly mapToRegistry using default registry
+82 silly mapToRegistry registry https://registry.npmjs.org/
+83 silly mapToRegistry uri https://registry.npmjs.org/gulp-uglify
+84 silly mapToRegistry name gulp-watch
+85 silly mapToRegistry using default registry
+86 silly mapToRegistry registry https://registry.npmjs.org/
+87 silly mapToRegistry uri https://registry.npmjs.org/gulp-watch
+88 silly mapToRegistry name bluebird
+89 silly mapToRegistry using default registry
+90 silly mapToRegistry registry https://registry.npmjs.org/
+91 silly mapToRegistry uri https://registry.npmjs.org/bluebird
+92 silly mapToRegistry name lodash
+93 silly mapToRegistry using default registry
+94 silly mapToRegistry registry https://registry.npmjs.org/
+95 silly mapToRegistry uri https://registry.npmjs.org/lodash
+96 silly mapToRegistry name babel-preset-es2015
+97 silly mapToRegistry using default registry
+98 silly mapToRegistry registry https://registry.npmjs.org/
+99 silly mapToRegistry uri https://registry.npmjs.org/babel-preset-es2015
+100 silly mapToRegistry name del
+101 silly mapToRegistry using default registry
+102 silly mapToRegistry registry https://registry.npmjs.org/
+103 silly mapToRegistry uri https://registry.npmjs.org/del
+104 silly mapToRegistry name gulp-changed
+105 silly mapToRegistry using default registry
+106 silly mapToRegistry registry https://registry.npmjs.org/
+107 silly mapToRegistry uri https://registry.npmjs.org/gulp-changed
+108 silly mapToRegistry name gulp-mocha
+109 silly mapToRegistry using default registry
+110 silly mapToRegistry registry https://registry.npmjs.org/
+111 silly mapToRegistry uri https://registry.npmjs.org/gulp-mocha
+112 verbose request uri https://registry.npmjs.org/babel-plugin-transform-remove-console
+113 verbose request no auth needed
+114 info attempt registry request try #1 at 23:39:17
+115 verbose request id 462d54494174b44a
+116 verbose etag "4B16B8R6F021Q1WR1Y8HEEN4F"
+117 http request GET https://registry.npmjs.org/babel-plugin-transform-remove-console
+118 verbose request uri https://registry.npmjs.org/babel-plugin-transform-strict-mode
+119 verbose request no auth needed
+120 info attempt registry request try #1 at 23:39:17
+121 verbose etag "8KW598779W6ND1NAGO0C18083"
+122 http request GET https://registry.npmjs.org/babel-plugin-transform-strict-mode
+123 verbose get https://registry.npmjs.org/babel-plugin-remove-comments not expired, no request
+124 verbose request uri https://registry.npmjs.org/babel-plugin-undeclared-variables-check
+125 verbose request no auth needed
+126 info attempt registry request try #1 at 23:39:17
+127 verbose etag "DPXIVMCOSGGGZDMYCSUAV0BET"
+128 http request GET https://registry.npmjs.org/babel-plugin-undeclared-variables-check
+129 verbose request uri https://registry.npmjs.org/babel-preset-es2015-node5
+130 verbose request no auth needed
+131 info attempt registry request try #1 at 23:39:17
+132 verbose etag "3K9OZPX6D8NFSH1MEAWCQMMTM"
+133 http request GET https://registry.npmjs.org/babel-preset-es2015-node5
+134 verbose request uri https://registry.npmjs.org/babel-preset-es2015
+135 verbose request no auth needed
+136 info attempt registry request try #1 at 23:39:17
+137 verbose etag "ELD2D54RMTUNWELKV0OELXPCI"
+138 http request GET https://registry.npmjs.org/babel-preset-es2015
+139 verbose request uri https://registry.npmjs.org/babel-preset-node5
+140 verbose request no auth needed
+141 info attempt registry request try #1 at 23:39:17
+142 verbose etag "9RW0F1AXJNCXB4HXMQHYFCTEC"
+143 http request GET https://registry.npmjs.org/babel-preset-node5
+144 verbose request uri https://registry.npmjs.org/del
+145 verbose request no auth needed
+146 info attempt registry request try #1 at 23:39:17
+147 verbose etag "8S2J5ZBHDP60HDVJ60ZL9JRU1"
+148 http request GET https://registry.npmjs.org/del
+149 verbose request uri https://registry.npmjs.org/chai
+150 verbose request no auth needed
+151 info attempt registry request try #1 at 23:39:18
+152 verbose etag "27R20BSOYSMHJWMLO7OLJZY0C"
+153 http request GET https://registry.npmjs.org/chai
+154 verbose request uri https://registry.npmjs.org/gulp-changed
+155 verbose request no auth needed
+156 info attempt registry request try #1 at 23:39:18
+157 verbose etag "52YMFZ2RKIAB6KPH1E1BWRNKD"
+158 http request GET https://registry.npmjs.org/gulp-changed
+159 verbose request uri https://registry.npmjs.org/gulp
+160 verbose request no auth needed
+161 info attempt registry request try #1 at 23:39:18
+162 verbose etag "6VC3GISARHU8GMMH0XX8PHZIY"
+163 http request GET https://registry.npmjs.org/gulp
+164 verbose request uri https://registry.npmjs.org/gulp-concat
+165 verbose request no auth needed
+166 info attempt registry request try #1 at 23:39:18
+167 verbose etag "6P3THUNF8VWDCEIXLCW3NYD10"
+168 http request GET https://registry.npmjs.org/gulp-concat
+169 verbose request uri https://registry.npmjs.org/gulp-babel
+170 verbose request no auth needed
+171 info attempt registry request try #1 at 23:39:18
+172 verbose etag "2YNVGA1WP270CZP2X1R6KE9V4"
+173 http request GET https://registry.npmjs.org/gulp-babel
+174 verbose request uri https://registry.npmjs.org/gulp-livereload
+175 verbose request no auth needed
+176 info attempt registry request try #1 at 23:39:18
+177 verbose etag "6Z0RCHGBH6OLHQ8T27VHE058M"
+178 http request GET https://registry.npmjs.org/gulp-livereload
+179 verbose request uri https://registry.npmjs.org/gulp-develop-server
+180 verbose request no auth needed
+181 info attempt registry request try #1 at 23:39:18
+182 verbose etag "5Y29B9TWO66S7UQG201L1EJIT"
+183 http request GET https://registry.npmjs.org/gulp-develop-server
+184 verbose request uri https://registry.npmjs.org/gulp-mocha
+185 verbose request no auth needed
+186 info attempt registry request try #1 at 23:39:18
+187 verbose etag "D89NN6H2NW9FEPGTCAL69VA5O"
+188 http request GET https://registry.npmjs.org/gulp-mocha
+189 verbose request uri https://registry.npmjs.org/gulp-nodemon
+190 verbose request no auth needed
+191 info attempt registry request try #1 at 23:39:18
+192 verbose etag "2R5F25HYXA5QO2FUZDZW22GQX"
+193 http request GET https://registry.npmjs.org/gulp-nodemon
+194 verbose request uri https://registry.npmjs.org/gulp-sourcemaps
+195 verbose request no auth needed
+196 info attempt registry request try #1 at 23:39:18
+197 verbose etag "2S4B1AMZ6GC1UDOSGMSTY2K51"
+198 http request GET https://registry.npmjs.org/gulp-sourcemaps
+199 verbose request uri https://registry.npmjs.org/gulp-plumber
+200 verbose request no auth needed
+201 info attempt registry request try #1 at 23:39:18
+202 verbose etag "D34J8LW1S9QPNMSKP74LCR34M"
+203 http request GET https://registry.npmjs.org/gulp-plumber
+204 verbose get https://registry.npmjs.org/gulp-uglify not expired, no request
+205 verbose get https://registry.npmjs.org/gulp-watch not expired, no request
+206 verbose request uri https://registry.npmjs.org/lodash
+207 verbose request no auth needed
+208 info attempt registry request try #1 at 23:39:18
+209 verbose etag "BSB2R0SUVK2T5JUT7QIX1SFMX"
+210 http request GET https://registry.npmjs.org/lodash
+211 verbose request uri https://registry.npmjs.org/babel-preset-es2015
+212 verbose request no auth needed
+213 info attempt registry request try #1 at 23:39:18
+214 verbose etag "ELD2D54RMTUNWELKV0OELXPCI"
+215 http request GET https://registry.npmjs.org/babel-preset-es2015
+216 verbose request uri https://registry.npmjs.org/del
+217 verbose request no auth needed
+218 info attempt registry request try #1 at 23:39:18
+219 verbose etag "8S2J5ZBHDP60HDVJ60ZL9JRU1"
+220 http request GET https://registry.npmjs.org/del
+221 verbose request uri https://registry.npmjs.org/gulp-changed
+222 verbose request no auth needed
+223 info attempt registry request try #1 at 23:39:18
+224 verbose etag "52YMFZ2RKIAB6KPH1E1BWRNKD"
+225 http request GET https://registry.npmjs.org/gulp-changed
+226 verbose request uri https://registry.npmjs.org/bluebird
+227 verbose request no auth needed
+228 info attempt registry request try #1 at 23:39:18
+229 verbose etag "CY4587VF8H5E1S652EST39KP6"
+230 http request GET https://registry.npmjs.org/bluebird
+231 verbose request uri https://registry.npmjs.org/gulp-mocha
+232 verbose request no auth needed
+233 info attempt registry request try #1 at 23:39:18
+234 verbose etag "D89NN6H2NW9FEPGTCAL69VA5O"
+235 http request GET https://registry.npmjs.org/gulp-mocha
+236 http 304 https://registry.npmjs.org/babel-preset-es2015
+237 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+237 verbose headers   via: '1.1 varnish',
+237 verbose headers   'cache-control': 'max-age=300',
+237 verbose headers   etag: '"ELD2D54RMTUNWELKV0OELXPCI"',
+237 verbose headers   age: '23',
+237 verbose headers   connection: 'keep-alive',
+237 verbose headers   'x-served-by': 'cache-fra1237-FRA',
+237 verbose headers   'x-cache': 'HIT',
+237 verbose headers   'x-cache-hits': '3',
+237 verbose headers   'x-timer': 'S1472315998.353141,VS0,VE0',
+237 verbose headers   vary: 'Accept-Encoding' }
+238 silly get cb [ 304,
+238 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+238 silly get     via: '1.1 varnish',
+238 silly get     'cache-control': 'max-age=300',
+238 silly get     etag: '"ELD2D54RMTUNWELKV0OELXPCI"',
+238 silly get     age: '23',
+238 silly get     connection: 'keep-alive',
+238 silly get     'x-served-by': 'cache-fra1237-FRA',
+238 silly get     'x-cache': 'HIT',
+238 silly get     'x-cache-hits': '3',
+238 silly get     'x-timer': 'S1472315998.353141,VS0,VE0',
+238 silly get     vary: 'Accept-Encoding' } ]
+239 verbose etag https://registry.npmjs.org/babel-preset-es2015 from cache
+240 verbose get saving babel-preset-es2015 to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-preset-es2015\.cache.json
+241 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+242 http 304 https://registry.npmjs.org/babel-plugin-transform-remove-console
+243 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+243 verbose headers   via: '1.1 varnish',
+243 verbose headers   'cache-control': 'max-age=300',
+243 verbose headers   etag: '"4B16B8R6F021Q1WR1Y8HEEN4F"',
+243 verbose headers   age: '68',
+243 verbose headers   connection: 'keep-alive',
+243 verbose headers   'x-served-by': 'cache-fra1230-FRA',
+243 verbose headers   'x-cache': 'HIT',
+243 verbose headers   'x-cache-hits': '1',
+243 verbose headers   'x-timer': 'S1472315998.359212,VS0,VE0',
+243 verbose headers   vary: 'Accept-Encoding' }
+244 silly get cb [ 304,
+244 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+244 silly get     via: '1.1 varnish',
+244 silly get     'cache-control': 'max-age=300',
+244 silly get     etag: '"4B16B8R6F021Q1WR1Y8HEEN4F"',
+244 silly get     age: '68',
+244 silly get     connection: 'keep-alive',
+244 silly get     'x-served-by': 'cache-fra1230-FRA',
+244 silly get     'x-cache': 'HIT',
+244 silly get     'x-cache-hits': '1',
+244 silly get     'x-timer': 'S1472315998.359212,VS0,VE0',
+244 silly get     vary: 'Accept-Encoding' } ]
+245 verbose etag https://registry.npmjs.org/babel-plugin-transform-remove-console from cache
+246 verbose get saving babel-plugin-transform-remove-console to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-plugin-transform-remove-console\.cache.json
+247 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+248 http 304 https://registry.npmjs.org/babel-plugin-transform-strict-mode
+249 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+249 verbose headers   via: '1.1 varnish',
+249 verbose headers   'cache-control': 'max-age=300',
+249 verbose headers   etag: '"8KW598779W6ND1NAGO0C18083"',
+249 verbose headers   age: '100',
+249 verbose headers   connection: 'keep-alive',
+249 verbose headers   'x-served-by': 'cache-fra1235-FRA',
+249 verbose headers   'x-cache': 'HIT',
+249 verbose headers   'x-cache-hits': '1',
+249 verbose headers   'x-timer': 'S1472315998.359476,VS0,VE0',
+249 verbose headers   vary: 'Accept-Encoding' }
+250 silly get cb [ 304,
+250 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+250 silly get     via: '1.1 varnish',
+250 silly get     'cache-control': 'max-age=300',
+250 silly get     etag: '"8KW598779W6ND1NAGO0C18083"',
+250 silly get     age: '100',
+250 silly get     connection: 'keep-alive',
+250 silly get     'x-served-by': 'cache-fra1235-FRA',
+250 silly get     'x-cache': 'HIT',
+250 silly get     'x-cache-hits': '1',
+250 silly get     'x-timer': 'S1472315998.359476,VS0,VE0',
+250 silly get     vary: 'Accept-Encoding' } ]
+251 verbose etag https://registry.npmjs.org/babel-plugin-transform-strict-mode from cache
+252 verbose get saving babel-plugin-transform-strict-mode to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-plugin-transform-strict-mode\.cache.json
+253 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+254 http 304 https://registry.npmjs.org/babel-plugin-undeclared-variables-check
+255 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+255 verbose headers   via: '1.1 varnish',
+255 verbose headers   'cache-control': 'max-age=300',
+255 verbose headers   etag: '"DPXIVMCOSGGGZDMYCSUAV0BET"',
+255 verbose headers   age: '36',
+255 verbose headers   connection: 'keep-alive',
+255 verbose headers   'x-served-by': 'cache-fra1248-FRA',
+255 verbose headers   'x-cache': 'HIT',
+255 verbose headers   'x-cache-hits': '1',
+255 verbose headers   'x-timer': 'S1472315998.363563,VS0,VE0',
+255 verbose headers   vary: 'Accept-Encoding' }
+256 silly get cb [ 304,
+256 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+256 silly get     via: '1.1 varnish',
+256 silly get     'cache-control': 'max-age=300',
+256 silly get     etag: '"DPXIVMCOSGGGZDMYCSUAV0BET"',
+256 silly get     age: '36',
+256 silly get     connection: 'keep-alive',
+256 silly get     'x-served-by': 'cache-fra1248-FRA',
+256 silly get     'x-cache': 'HIT',
+256 silly get     'x-cache-hits': '1',
+256 silly get     'x-timer': 'S1472315998.363563,VS0,VE0',
+256 silly get     vary: 'Accept-Encoding' } ]
+257 verbose etag https://registry.npmjs.org/babel-plugin-undeclared-variables-check from cache
+258 verbose get saving babel-plugin-undeclared-variables-check to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-plugin-undeclared-variables-check\.cache.json
+259 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+260 http 304 https://registry.npmjs.org/babel-preset-es2015-node5
+261 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+261 verbose headers   via: '1.1 varnish',
+261 verbose headers   'cache-control': 'max-age=300',
+261 verbose headers   etag: '"3K9OZPX6D8NFSH1MEAWCQMMTM"',
+261 verbose headers   age: '68',
+261 verbose headers   connection: 'keep-alive',
+261 verbose headers   'x-served-by': 'cache-fra1241-FRA',
+261 verbose headers   'x-cache': 'HIT',
+261 verbose headers   'x-cache-hits': '1',
+261 verbose headers   'x-timer': 'S1472315998.411615,VS0,VE0',
+261 verbose headers   vary: 'Accept-Encoding' }
+262 silly get cb [ 304,
+262 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+262 silly get     via: '1.1 varnish',
+262 silly get     'cache-control': 'max-age=300',
+262 silly get     etag: '"3K9OZPX6D8NFSH1MEAWCQMMTM"',
+262 silly get     age: '68',
+262 silly get     connection: 'keep-alive',
+262 silly get     'x-served-by': 'cache-fra1241-FRA',
+262 silly get     'x-cache': 'HIT',
+262 silly get     'x-cache-hits': '1',
+262 silly get     'x-timer': 'S1472315998.411615,VS0,VE0',
+262 silly get     vary: 'Accept-Encoding' } ]
+263 verbose etag https://registry.npmjs.org/babel-preset-es2015-node5 from cache
+264 verbose get saving babel-preset-es2015-node5 to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-preset-es2015-node5\.cache.json
+265 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+266 http 304 https://registry.npmjs.org/babel-preset-node5
+267 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+267 verbose headers   via: '1.1 varnish',
+267 verbose headers   'cache-control': 'max-age=300',
+267 verbose headers   etag: '"9RW0F1AXJNCXB4HXMQHYFCTEC"',
+267 verbose headers   age: '68',
+267 verbose headers   connection: 'keep-alive',
+267 verbose headers   'x-served-by': 'cache-fra1235-FRA',
+267 verbose headers   'x-cache': 'HIT',
+267 verbose headers   'x-cache-hits': '16',
+267 verbose headers   'x-timer': 'S1472315998.472765,VS0,VE0',
+267 verbose headers   vary: 'Accept-Encoding' }
+268 silly get cb [ 304,
+268 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+268 silly get     via: '1.1 varnish',
+268 silly get     'cache-control': 'max-age=300',
+268 silly get     etag: '"9RW0F1AXJNCXB4HXMQHYFCTEC"',
+268 silly get     age: '68',
+268 silly get     connection: 'keep-alive',
+268 silly get     'x-served-by': 'cache-fra1235-FRA',
+268 silly get     'x-cache': 'HIT',
+268 silly get     'x-cache-hits': '16',
+268 silly get     'x-timer': 'S1472315998.472765,VS0,VE0',
+268 silly get     vary: 'Accept-Encoding' } ]
+269 verbose etag https://registry.npmjs.org/babel-preset-node5 from cache
+270 verbose get saving babel-preset-node5 to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-preset-node5\.cache.json
+271 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+272 http 304 https://registry.npmjs.org/del
+273 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+273 verbose headers   via: '1.1 varnish',
+273 verbose headers   'cache-control': 'max-age=300',
+273 verbose headers   etag: '"8S2J5ZBHDP60HDVJ60ZL9JRU1"',
+273 verbose headers   age: '188',
+273 verbose headers   connection: 'keep-alive',
+273 verbose headers   'x-served-by': 'cache-fra1243-FRA',
+273 verbose headers   'x-cache': 'HIT',
+273 verbose headers   'x-cache-hits': '3',
+273 verbose headers   'x-timer': 'S1472315998.491460,VS0,VE0',
+273 verbose headers   vary: 'Accept-Encoding' }
+274 silly get cb [ 304,
+274 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+274 silly get     via: '1.1 varnish',
+274 silly get     'cache-control': 'max-age=300',
+274 silly get     etag: '"8S2J5ZBHDP60HDVJ60ZL9JRU1"',
+274 silly get     age: '188',
+274 silly get     connection: 'keep-alive',
+274 silly get     'x-served-by': 'cache-fra1243-FRA',
+274 silly get     'x-cache': 'HIT',
+274 silly get     'x-cache-hits': '3',
+274 silly get     'x-timer': 'S1472315998.491460,VS0,VE0',
+274 silly get     vary: 'Accept-Encoding' } ]
+275 verbose etag https://registry.npmjs.org/del from cache
+276 verbose get saving del to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\del\.cache.json
+277 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+278 http 304 https://registry.npmjs.org/gulp-changed
+279 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+279 verbose headers   via: '1.1 varnish',
+279 verbose headers   'cache-control': 'max-age=300',
+279 verbose headers   etag: '"52YMFZ2RKIAB6KPH1E1BWRNKD"',
+279 verbose headers   age: '197',
+279 verbose headers   connection: 'keep-alive',
+279 verbose headers   'x-served-by': 'cache-fra1230-FRA',
+279 verbose headers   'x-cache': 'HIT',
+279 verbose headers   'x-cache-hits': '1',
+279 verbose headers   'x-timer': 'S1472315998.513748,VS0,VE0',
+279 verbose headers   vary: 'Accept-Encoding' }
+280 silly get cb [ 304,
+280 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+280 silly get     via: '1.1 varnish',
+280 silly get     'cache-control': 'max-age=300',
+280 silly get     etag: '"52YMFZ2RKIAB6KPH1E1BWRNKD"',
+280 silly get     age: '197',
+280 silly get     connection: 'keep-alive',
+280 silly get     'x-served-by': 'cache-fra1230-FRA',
+280 silly get     'x-cache': 'HIT',
+280 silly get     'x-cache-hits': '1',
+280 silly get     'x-timer': 'S1472315998.513748,VS0,VE0',
+280 silly get     vary: 'Accept-Encoding' } ]
+281 verbose etag https://registry.npmjs.org/gulp-changed from cache
+282 verbose get saving gulp-changed to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-changed\.cache.json
+283 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+284 http 304 https://registry.npmjs.org/chai
+285 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+285 verbose headers   via: '1.1 varnish',
+285 verbose headers   'cache-control': 'max-age=300',
+285 verbose headers   etag: '"27R20BSOYSMHJWMLO7OLJZY0C"',
+285 verbose headers   age: '217',
+285 verbose headers   connection: 'keep-alive',
+285 verbose headers   'x-served-by': 'cache-fra1221-FRA',
+285 verbose headers   'x-cache': 'HIT',
+285 verbose headers   'x-cache-hits': '1',
+285 verbose headers   'x-timer': 'S1472315998.513808,VS0,VE0',
+285 verbose headers   vary: 'Accept-Encoding' }
+286 silly get cb [ 304,
+286 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+286 silly get     via: '1.1 varnish',
+286 silly get     'cache-control': 'max-age=300',
+286 silly get     etag: '"27R20BSOYSMHJWMLO7OLJZY0C"',
+286 silly get     age: '217',
+286 silly get     connection: 'keep-alive',
+286 silly get     'x-served-by': 'cache-fra1221-FRA',
+286 silly get     'x-cache': 'HIT',
+286 silly get     'x-cache-hits': '1',
+286 silly get     'x-timer': 'S1472315998.513808,VS0,VE0',
+286 silly get     vary: 'Accept-Encoding' } ]
+287 verbose etag https://registry.npmjs.org/chai from cache
+288 verbose get saving chai to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\chai\.cache.json
+289 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+290 http 304 https://registry.npmjs.org/gulp-concat
+291 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+291 verbose headers   via: '1.1 varnish',
+291 verbose headers   'cache-control': 'max-age=300',
+291 verbose headers   etag: '"6P3THUNF8VWDCEIXLCW3NYD10"',
+291 verbose headers   age: '106',
+291 verbose headers   connection: 'keep-alive',
+291 verbose headers   'x-served-by': 'cache-fra1245-FRA',
+291 verbose headers   'x-cache': 'HIT',
+291 verbose headers   'x-cache-hits': '1',
+291 verbose headers   'x-timer': 'S1472315998.559983,VS0,VE0',
+291 verbose headers   vary: 'Accept-Encoding' }
+292 silly get cb [ 304,
+292 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+292 silly get     via: '1.1 varnish',
+292 silly get     'cache-control': 'max-age=300',
+292 silly get     etag: '"6P3THUNF8VWDCEIXLCW3NYD10"',
+292 silly get     age: '106',
+292 silly get     connection: 'keep-alive',
+292 silly get     'x-served-by': 'cache-fra1245-FRA',
+292 silly get     'x-cache': 'HIT',
+292 silly get     'x-cache-hits': '1',
+292 silly get     'x-timer': 'S1472315998.559983,VS0,VE0',
+292 silly get     vary: 'Accept-Encoding' } ]
+293 verbose etag https://registry.npmjs.org/gulp-concat from cache
+294 verbose get saving gulp-concat to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-concat\.cache.json
+295 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+296 http 304 https://registry.npmjs.org/gulp
+297 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+297 verbose headers   via: '1.1 varnish',
+297 verbose headers   'cache-control': 'max-age=300',
+297 verbose headers   etag: '"6VC3GISARHU8GMMH0XX8PHZIY"',
+297 verbose headers   age: '259',
+297 verbose headers   connection: 'keep-alive',
+297 verbose headers   'x-served-by': 'cache-fra1240-FRA',
+297 verbose headers   'x-cache': 'HIT',
+297 verbose headers   'x-cache-hits': '3',
+297 verbose headers   'x-timer': 'S1472315998.565631,VS0,VE0',
+297 verbose headers   vary: 'Accept-Encoding' }
+298 silly get cb [ 304,
+298 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+298 silly get     via: '1.1 varnish',
+298 silly get     'cache-control': 'max-age=300',
+298 silly get     etag: '"6VC3GISARHU8GMMH0XX8PHZIY"',
+298 silly get     age: '259',
+298 silly get     connection: 'keep-alive',
+298 silly get     'x-served-by': 'cache-fra1240-FRA',
+298 silly get     'x-cache': 'HIT',
+298 silly get     'x-cache-hits': '3',
+298 silly get     'x-timer': 'S1472315998.565631,VS0,VE0',
+298 silly get     vary: 'Accept-Encoding' } ]
+299 verbose etag https://registry.npmjs.org/gulp from cache
+300 verbose get saving gulp to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp\.cache.json
+301 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+302 http 304 https://registry.npmjs.org/gulp-babel
+303 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+303 verbose headers   via: '1.1 varnish',
+303 verbose headers   'cache-control': 'max-age=300',
+303 verbose headers   etag: '"2YNVGA1WP270CZP2X1R6KE9V4"',
+303 verbose headers   age: '21',
+303 verbose headers   connection: 'keep-alive',
+303 verbose headers   'x-served-by': 'cache-fra1224-FRA',
+303 verbose headers   'x-cache': 'HIT',
+303 verbose headers   'x-cache-hits': '1',
+303 verbose headers   'x-timer': 'S1472315998.596150,VS0,VE0',
+303 verbose headers   vary: 'Accept-Encoding' }
+304 silly get cb [ 304,
+304 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+304 silly get     via: '1.1 varnish',
+304 silly get     'cache-control': 'max-age=300',
+304 silly get     etag: '"2YNVGA1WP270CZP2X1R6KE9V4"',
+304 silly get     age: '21',
+304 silly get     connection: 'keep-alive',
+304 silly get     'x-served-by': 'cache-fra1224-FRA',
+304 silly get     'x-cache': 'HIT',
+304 silly get     'x-cache-hits': '1',
+304 silly get     'x-timer': 'S1472315998.596150,VS0,VE0',
+304 silly get     vary: 'Accept-Encoding' } ]
+305 verbose etag https://registry.npmjs.org/gulp-babel from cache
+306 verbose get saving gulp-babel to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-babel\.cache.json
+307 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+308 http 304 https://registry.npmjs.org/gulp-livereload
+309 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+309 verbose headers   via: '1.1 varnish',
+309 verbose headers   'cache-control': 'max-age=300',
+309 verbose headers   etag: '"6Z0RCHGBH6OLHQ8T27VHE058M"',
+309 verbose headers   age: '158',
+309 verbose headers   connection: 'keep-alive',
+309 verbose headers   'x-served-by': 'cache-fra1239-FRA',
+309 verbose headers   'x-cache': 'HIT',
+309 verbose headers   'x-cache-hits': '1',
+309 verbose headers   'x-timer': 'S1472315998.664452,VS0,VE0',
+309 verbose headers   vary: 'Accept-Encoding' }
+310 silly get cb [ 304,
+310 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+310 silly get     via: '1.1 varnish',
+310 silly get     'cache-control': 'max-age=300',
+310 silly get     etag: '"6Z0RCHGBH6OLHQ8T27VHE058M"',
+310 silly get     age: '158',
+310 silly get     connection: 'keep-alive',
+310 silly get     'x-served-by': 'cache-fra1239-FRA',
+310 silly get     'x-cache': 'HIT',
+310 silly get     'x-cache-hits': '1',
+310 silly get     'x-timer': 'S1472315998.664452,VS0,VE0',
+310 silly get     vary: 'Accept-Encoding' } ]
+311 verbose etag https://registry.npmjs.org/gulp-livereload from cache
+312 verbose get saving gulp-livereload to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-livereload\.cache.json
+313 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+314 http 304 https://registry.npmjs.org/gulp-develop-server
+315 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+315 verbose headers   via: '1.1 varnish',
+315 verbose headers   'cache-control': 'max-age=300',
+315 verbose headers   etag: '"5Y29B9TWO66S7UQG201L1EJIT"',
+315 verbose headers   age: '166',
+315 verbose headers   connection: 'keep-alive',
+315 verbose headers   'x-served-by': 'cache-fra1243-FRA',
+315 verbose headers   'x-cache': 'HIT',
+315 verbose headers   'x-cache-hits': '1',
+315 verbose headers   'x-timer': 'S1472315998.787170,VS0,VE0',
+315 verbose headers   vary: 'Accept-Encoding' }
+316 silly get cb [ 304,
+316 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+316 silly get     via: '1.1 varnish',
+316 silly get     'cache-control': 'max-age=300',
+316 silly get     etag: '"5Y29B9TWO66S7UQG201L1EJIT"',
+316 silly get     age: '166',
+316 silly get     connection: 'keep-alive',
+316 silly get     'x-served-by': 'cache-fra1243-FRA',
+316 silly get     'x-cache': 'HIT',
+316 silly get     'x-cache-hits': '1',
+316 silly get     'x-timer': 'S1472315998.787170,VS0,VE0',
+316 silly get     vary: 'Accept-Encoding' } ]
+317 verbose etag https://registry.npmjs.org/gulp-develop-server from cache
+318 verbose get saving gulp-develop-server to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-develop-server\.cache.json
+319 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+320 http 304 https://registry.npmjs.org/gulp-mocha
+321 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+321 verbose headers   via: '1.1 varnish',
+321 verbose headers   'cache-control': 'max-age=300',
+321 verbose headers   etag: '"D89NN6H2NW9FEPGTCAL69VA5O"',
+321 verbose headers   age: '252',
+321 verbose headers   connection: 'keep-alive',
+321 verbose headers   'x-served-by': 'cache-fra1222-FRA',
+321 verbose headers   'x-cache': 'HIT',
+321 verbose headers   'x-cache-hits': '3',
+321 verbose headers   'x-timer': 'S1472315998.821805,VS0,VE0',
+321 verbose headers   vary: 'Accept-Encoding' }
+322 silly get cb [ 304,
+322 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+322 silly get     via: '1.1 varnish',
+322 silly get     'cache-control': 'max-age=300',
+322 silly get     etag: '"D89NN6H2NW9FEPGTCAL69VA5O"',
+322 silly get     age: '252',
+322 silly get     connection: 'keep-alive',
+322 silly get     'x-served-by': 'cache-fra1222-FRA',
+322 silly get     'x-cache': 'HIT',
+322 silly get     'x-cache-hits': '3',
+322 silly get     'x-timer': 'S1472315998.821805,VS0,VE0',
+322 silly get     vary: 'Accept-Encoding' } ]
+323 verbose etag https://registry.npmjs.org/gulp-mocha from cache
+324 verbose get saving gulp-mocha to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-mocha\.cache.json
+325 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+326 http 304 https://registry.npmjs.org/gulp-nodemon
+327 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+327 verbose headers   via: '1.1 varnish',
+327 verbose headers   'cache-control': 'max-age=300',
+327 verbose headers   etag: '"2R5F25HYXA5QO2FUZDZW22GQX"',
+327 verbose headers   age: '233',
+327 verbose headers   connection: 'keep-alive',
+327 verbose headers   'x-served-by': 'cache-fra1251-FRA',
+327 verbose headers   'x-cache': 'HIT',
+327 verbose headers   'x-cache-hits': '1',
+327 verbose headers   'x-timer': 'S1472315998.894178,VS0,VE0',
+327 verbose headers   vary: 'Accept-Encoding' }
+328 silly get cb [ 304,
+328 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+328 silly get     via: '1.1 varnish',
+328 silly get     'cache-control': 'max-age=300',
+328 silly get     etag: '"2R5F25HYXA5QO2FUZDZW22GQX"',
+328 silly get     age: '233',
+328 silly get     connection: 'keep-alive',
+328 silly get     'x-served-by': 'cache-fra1251-FRA',
+328 silly get     'x-cache': 'HIT',
+328 silly get     'x-cache-hits': '1',
+328 silly get     'x-timer': 'S1472315998.894178,VS0,VE0',
+328 silly get     vary: 'Accept-Encoding' } ]
+329 verbose etag https://registry.npmjs.org/gulp-nodemon from cache
+330 verbose get saving gulp-nodemon to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-nodemon\.cache.json
+331 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+332 http 304 https://registry.npmjs.org/gulp-sourcemaps
+333 verbose headers { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+333 verbose headers   via: '1.1 varnish',
+333 verbose headers   'cache-control': 'max-age=300',
+333 verbose headers   etag: '"2S4B1AMZ6GC1UDOSGMSTY2K51"',
+333 verbose headers   age: '199',
+333 verbose headers   connection: 'keep-alive',
+333 verbose headers   'x-served-by': 'cache-fra1221-FRA',
+333 verbose headers   'x-cache': 'HIT',
+333 verbose headers   'x-cache-hits': '2',
+333 verbose headers   'x-timer': 'S1472315998.908011,VS0,VE0',
+333 verbose headers   vary: 'Accept-Encoding' }
+334 silly get cb [ 304,
+334 silly get   { date: 'Sat, 27 Aug 2016 16:39:58 GMT',
+334 silly get     via: '1.1 varnish',
+334 silly get     'cache-control': 'max-age=300',
+334 silly get     etag: '"2S4B1AMZ6GC1UDOSGMSTY2K51"',
+334 silly get     age: '199',
+334 silly get     connection: 'keep-alive',
+334 silly get     'x-served-by': 'cache-fra1221-FRA',
+334 silly get     'x-cache': 'HIT',
+334 silly get     'x-cache-hits': '2',
+334 silly get     'x-timer': 'S1472315998.908011,VS0,VE0',
+334 silly get     vary: 'Accept-Encoding' } ]
+335 verbose etag https://registry.npmjs.org/gulp-sourcemaps from cache
+336 verbose get saving gulp-sourcemaps to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-sourcemaps\.cache.json
+337 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+338 http 304 https://registry.npmjs.org/babel-preset-es2015
+339 verbose headers { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+339 verbose headers   via: '1.1 varnish',
+339 verbose headers   'cache-control': 'max-age=300',
+339 verbose headers   etag: '"ELD2D54RMTUNWELKV0OELXPCI"',
+339 verbose headers   age: '24',
+339 verbose headers   connection: 'keep-alive',
+339 verbose headers   'x-served-by': 'cache-fra1247-FRA',
+339 verbose headers   'x-cache': 'HIT',
+339 verbose headers   'x-cache-hits': '2',
+339 verbose headers   'x-timer': 'S1472315999.002674,VS0,VE0',
+339 verbose headers   vary: 'Accept-Encoding' }
+340 silly get cb [ 304,
+340 silly get   { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+340 silly get     via: '1.1 varnish',
+340 silly get     'cache-control': 'max-age=300',
+340 silly get     etag: '"ELD2D54RMTUNWELKV0OELXPCI"',
+340 silly get     age: '24',
+340 silly get     connection: 'keep-alive',
+340 silly get     'x-served-by': 'cache-fra1247-FRA',
+340 silly get     'x-cache': 'HIT',
+340 silly get     'x-cache-hits': '2',
+340 silly get     'x-timer': 'S1472315999.002674,VS0,VE0',
+340 silly get     vary: 'Accept-Encoding' } ]
+341 verbose etag https://registry.npmjs.org/babel-preset-es2015 from cache
+342 verbose get saving babel-preset-es2015 to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-preset-es2015\.cache.json
+343 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+344 http 304 https://registry.npmjs.org/del
+345 verbose headers { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+345 verbose headers   via: '1.1 varnish',
+345 verbose headers   'cache-control': 'max-age=300',
+345 verbose headers   etag: '"8S2J5ZBHDP60HDVJ60ZL9JRU1"',
+345 verbose headers   age: '189',
+345 verbose headers   connection: 'keep-alive',
+345 verbose headers   'x-served-by': 'cache-fra1221-FRA',
+345 verbose headers   'x-cache': 'HIT',
+345 verbose headers   'x-cache-hits': '1',
+345 verbose headers   'x-timer': 'S1472315999.004110,VS0,VE0',
+345 verbose headers   vary: 'Accept-Encoding' }
+346 silly get cb [ 304,
+346 silly get   { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+346 silly get     via: '1.1 varnish',
+346 silly get     'cache-control': 'max-age=300',
+346 silly get     etag: '"8S2J5ZBHDP60HDVJ60ZL9JRU1"',
+346 silly get     age: '189',
+346 silly get     connection: 'keep-alive',
+346 silly get     'x-served-by': 'cache-fra1221-FRA',
+346 silly get     'x-cache': 'HIT',
+346 silly get     'x-cache-hits': '1',
+346 silly get     'x-timer': 'S1472315999.004110,VS0,VE0',
+346 silly get     vary: 'Accept-Encoding' } ]
+347 verbose etag https://registry.npmjs.org/del from cache
+348 verbose get saving del to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\del\.cache.json
+349 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+350 http 304 https://registry.npmjs.org/lodash
+351 verbose headers { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+351 verbose headers   via: '1.1 varnish',
+351 verbose headers   'cache-control': 'max-age=300',
+351 verbose headers   etag: '"BSB2R0SUVK2T5JUT7QIX1SFMX"',
+351 verbose headers   age: '7',
+351 verbose headers   connection: 'keep-alive',
+351 verbose headers   'x-served-by': 'cache-fra1221-FRA',
+351 verbose headers   'x-cache': 'HIT',
+351 verbose headers   'x-cache-hits': '1',
+351 verbose headers   'x-timer': 'S1472315999.005218,VS0,VE0',
+351 verbose headers   vary: 'Accept-Encoding' }
+352 silly get cb [ 304,
+352 silly get   { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+352 silly get     via: '1.1 varnish',
+352 silly get     'cache-control': 'max-age=300',
+352 silly get     etag: '"BSB2R0SUVK2T5JUT7QIX1SFMX"',
+352 silly get     age: '7',
+352 silly get     connection: 'keep-alive',
+352 silly get     'x-served-by': 'cache-fra1221-FRA',
+352 silly get     'x-cache': 'HIT',
+352 silly get     'x-cache-hits': '1',
+352 silly get     'x-timer': 'S1472315999.005218,VS0,VE0',
+352 silly get     vary: 'Accept-Encoding' } ]
+353 verbose etag https://registry.npmjs.org/lodash from cache
+354 verbose get saving lodash to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\lodash\.cache.json
+355 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+356 http 304 https://registry.npmjs.org/bluebird
+357 verbose headers { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+357 verbose headers   via: '1.1 varnish',
+357 verbose headers   'cache-control': 'max-age=300',
+357 verbose headers   etag: '"CY4587VF8H5E1S652EST39KP6"',
+357 verbose headers   age: '259',
+357 verbose headers   connection: 'keep-alive',
+357 verbose headers   'x-served-by': 'cache-fra1230-FRA',
+357 verbose headers   'x-cache': 'HIT',
+357 verbose headers   'x-cache-hits': '10',
+357 verbose headers   'x-timer': 'S1472315999.009879,VS0,VE0',
+357 verbose headers   vary: 'Accept-Encoding' }
+358 silly get cb [ 304,
+358 silly get   { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+358 silly get     via: '1.1 varnish',
+358 silly get     'cache-control': 'max-age=300',
+358 silly get     etag: '"CY4587VF8H5E1S652EST39KP6"',
+358 silly get     age: '259',
+358 silly get     connection: 'keep-alive',
+358 silly get     'x-served-by': 'cache-fra1230-FRA',
+358 silly get     'x-cache': 'HIT',
+358 silly get     'x-cache-hits': '10',
+358 silly get     'x-timer': 'S1472315999.009879,VS0,VE0',
+358 silly get     vary: 'Accept-Encoding' } ]
+359 verbose etag https://registry.npmjs.org/bluebird from cache
+360 verbose get saving bluebird to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\bluebird\.cache.json
+361 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+362 http 304 https://registry.npmjs.org/gulp-plumber
+363 verbose headers { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+363 verbose headers   via: '1.1 varnish',
+363 verbose headers   'cache-control': 'max-age=300',
+363 verbose headers   etag: '"D34J8LW1S9QPNMSKP74LCR34M"',
+363 verbose headers   age: '232',
+363 verbose headers   connection: 'keep-alive',
+363 verbose headers   'x-served-by': 'cache-fra1245-FRA',
+363 verbose headers   'x-cache': 'HIT',
+363 verbose headers   'x-cache-hits': '3',
+363 verbose headers   'x-timer': 'S1472315999.016029,VS0,VE0',
+363 verbose headers   vary: 'Accept-Encoding' }
+364 silly get cb [ 304,
+364 silly get   { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+364 silly get     via: '1.1 varnish',
+364 silly get     'cache-control': 'max-age=300',
+364 silly get     etag: '"D34J8LW1S9QPNMSKP74LCR34M"',
+364 silly get     age: '232',
+364 silly get     connection: 'keep-alive',
+364 silly get     'x-served-by': 'cache-fra1245-FRA',
+364 silly get     'x-cache': 'HIT',
+364 silly get     'x-cache-hits': '3',
+364 silly get     'x-timer': 'S1472315999.016029,VS0,VE0',
+364 silly get     vary: 'Accept-Encoding' } ]
+365 verbose etag https://registry.npmjs.org/gulp-plumber from cache
+366 verbose get saving gulp-plumber to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-plumber\.cache.json
+367 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+368 http 304 https://registry.npmjs.org/gulp-changed
+369 verbose headers { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+369 verbose headers   via: '1.1 varnish',
+369 verbose headers   'cache-control': 'max-age=300',
+369 verbose headers   etag: '"52YMFZ2RKIAB6KPH1E1BWRNKD"',
+369 verbose headers   age: '197',
+369 verbose headers   connection: 'keep-alive',
+369 verbose headers   'x-served-by': 'cache-fra1243-FRA',
+369 verbose headers   'x-cache': 'HIT',
+369 verbose headers   'x-cache-hits': '1',
+369 verbose headers   'x-timer': 'S1472315999.017356,VS0,VE0',
+369 verbose headers   vary: 'Accept-Encoding' }
+370 silly get cb [ 304,
+370 silly get   { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+370 silly get     via: '1.1 varnish',
+370 silly get     'cache-control': 'max-age=300',
+370 silly get     etag: '"52YMFZ2RKIAB6KPH1E1BWRNKD"',
+370 silly get     age: '197',
+370 silly get     connection: 'keep-alive',
+370 silly get     'x-served-by': 'cache-fra1243-FRA',
+370 silly get     'x-cache': 'HIT',
+370 silly get     'x-cache-hits': '1',
+370 silly get     'x-timer': 'S1472315999.017356,VS0,VE0',
+370 silly get     vary: 'Accept-Encoding' } ]
+371 verbose etag https://registry.npmjs.org/gulp-changed from cache
+372 verbose get saving gulp-changed to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-changed\.cache.json
+373 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+374 http 304 https://registry.npmjs.org/gulp-mocha
+375 verbose headers { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+375 verbose headers   via: '1.1 varnish',
+375 verbose headers   'cache-control': 'max-age=300',
+375 verbose headers   etag: '"D89NN6H2NW9FEPGTCAL69VA5O"',
+375 verbose headers   age: '252',
+375 verbose headers   connection: 'keep-alive',
+375 verbose headers   'x-served-by': 'cache-fra1245-FRA',
+375 verbose headers   'x-cache': 'HIT',
+375 verbose headers   'x-cache-hits': '1',
+375 verbose headers   'x-timer': 'S1472315999.020983,VS0,VE0',
+375 verbose headers   vary: 'Accept-Encoding' }
+376 silly get cb [ 304,
+376 silly get   { date: 'Sat, 27 Aug 2016 16:39:59 GMT',
+376 silly get     via: '1.1 varnish',
+376 silly get     'cache-control': 'max-age=300',
+376 silly get     etag: '"D89NN6H2NW9FEPGTCAL69VA5O"',
+376 silly get     age: '252',
+376 silly get     connection: 'keep-alive',
+376 silly get     'x-served-by': 'cache-fra1245-FRA',
+376 silly get     'x-cache': 'HIT',
+376 silly get     'x-cache-hits': '1',
+376 silly get     'x-timer': 'S1472315999.020983,VS0,VE0',
+376 silly get     vary: 'Accept-Encoding' } ]
+377 verbose etag https://registry.npmjs.org/gulp-mocha from cache
+378 verbose get saving gulp-mocha to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-mocha\.cache.json
+379 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+380 verbose outdated not updating gulp-sourcemaps because it's currently at the maximum version that matches its specified semver range
+381 info outdated updating [ { dep:
+381 info outdated      { package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket',
+381 info outdated        parent: [Object],
+381 info outdated        isMissing: true },
+381 info outdated     depname: 'babel-preset-es2015',
+381 info outdated     current: '6.13.1',
+381 info outdated     wanted: '6.14.0',
+381 info outdated     latest: '6.14.0',
+381 info outdated     req: '^6.14.0',
+381 info outdated     what: 'babel-preset-es2015@6.14.0' },
+381 info outdated   { dep:
+381 info outdated      { package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket',
+381 info outdated        parent: [Object],
+381 info outdated        isMissing: true },
+381 info outdated     depname: 'bluebird',
+381 info outdated     current: undefined,
+381 info outdated     wanted: '3.4.3',
+381 info outdated     latest: '3.4.3',
+381 info outdated     req: '^3.4.3',
+381 info outdated     what: 'bluebird@3.4.3' },
+381 info outdated   { dep:
+381 info outdated      { package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket',
+381 info outdated        parent: [Object],
+381 info outdated        isMissing: true },
+381 info outdated     depname: 'del',
+381 info outdated     current: '2.2.1',
+381 info outdated     wanted: '2.2.2',
+381 info outdated     latest: '2.2.2',
+381 info outdated     req: '^2.2.2',
+381 info outdated     what: 'del@2.2.2' },
+381 info outdated   { dep:
+381 info outdated      { package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket',
+381 info outdated        parent: [Object],
+381 info outdated        isMissing: true },
+381 info outdated     depname: 'gulp-changed',
+381 info outdated     current: '1.3.1',
+381 info outdated     wanted: '1.3.2',
+381 info outdated     latest: '1.3.2',
+381 info outdated     req: '^1.3.2',
+381 info outdated     what: 'gulp-changed@1.3.2' },
+381 info outdated   { dep:
+381 info outdated      { package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket',
+381 info outdated        parent: [Object],
+381 info outdated        isMissing: true },
+381 info outdated     depname: 'gulp-mocha',
+381 info outdated     current: '3.0.0',
+381 info outdated     wanted: '3.0.1',
+381 info outdated     latest: '3.0.1',
+381 info outdated     req: '^3.0.1',
+381 info outdated     what: 'gulp-mocha@3.0.1' },
+381 info outdated   { dep:
+381 info outdated      { package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket',
+381 info outdated        parent: [Object],
+381 info outdated        isMissing: true },
+381 info outdated     depname: 'lodash',
+381 info outdated     current: undefined,
+381 info outdated     wanted: '4.15.0',
+381 info outdated     latest: '4.15.0',
+381 info outdated     req: '^4.15.0',
+381 info outdated     what: 'lodash@4.15.0' },
+381 info outdated   { dep:
+381 info outdated      { package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket',
+381 info outdated        parent: [Object],
+381 info outdated        isMissing: true },
+381 info outdated     depname: 'resource-management-framework',
+381 info outdated     current: undefined,
+381 info outdated     wanted: 'git',
+381 info outdated     latest: 'git',
+381 info outdated     req: 'git+https://github.com/YuuKohaku/rmf-on-rdf.git',
+381 info outdated     what: 'resource-management-framework@git' },
+381 info outdated   { dep:
+381 info outdated      Node {
+381 info outdated        id: 74,
+381 info outdated        package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\babel-preset-es2015',
+381 info outdated        realpath: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\babel-preset-es2015',
+381 info outdated        parent: [Object],
+381 info outdated        isLink: false,
+381 info outdated        children: [Object],
+381 info outdated        error: null,
+381 info outdated        loaded: false,
+381 info outdated        requiredBy: [Object],
+381 info outdated        requires: [Object],
+381 info outdated        missingDeps: {},
+381 info outdated        missingDevDeps: {},
+381 info outdated        userRequired: false,
+381 info outdated        existing: false },
+381 info outdated     depname: 'babel-preset-es2015',
+381 info outdated     current: '6.13.1',
+381 info outdated     wanted: '6.14.0',
+381 info outdated     latest: '6.14.0',
+381 info outdated     req: '^6.14.0',
+381 info outdated     what: 'babel-preset-es2015@6.14.0' },
+381 info outdated   { dep:
+381 info outdated      Node {
+381 info outdated        id: 128,
+381 info outdated        package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\del',
+381 info outdated        realpath: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\del',
+381 info outdated        parent: [Object],
+381 info outdated        isLink: false,
+381 info outdated        children: [Object],
+381 info outdated        error: null,
+381 info outdated        loaded: false,
+381 info outdated        requiredBy: [Object],
+381 info outdated        requires: [Object],
+381 info outdated        missingDeps: {},
+381 info outdated        missingDevDeps: {},
+381 info outdated        userRequired: false,
+381 info outdated        existing: false },
+381 info outdated     depname: 'del',
+381 info outdated     current: '2.2.1',
+381 info outdated     wanted: '2.2.2',
+381 info outdated     latest: '2.2.2',
+381 info outdated     req: '^2.2.2',
+381 info outdated     what: 'del@2.2.2' },
+381 info outdated   { dep:
+381 info outdated      Node {
+381 info outdated        id: 184,
+381 info outdated        package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\global-queue',
+381 info outdated        realpath: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\global-queue',
+381 info outdated        parent: [Object],
+381 info outdated        isLink: false,
+381 info outdated        children: [Object],
+381 info outdated        error: null,
+381 info outdated        loaded: false,
+381 info outdated        requiredBy: [Object],
+381 info outdated        requires: [Object],
+381 info outdated        missingDeps: {},
+381 info outdated        missingDevDeps: {},
+381 info outdated        userRequired: false,
+381 info outdated        existing: false },
+381 info outdated     depname: 'global-queue',
+381 info outdated     current: '1.5.0',
+381 info outdated     wanted: 'git',
+381 info outdated     latest: 'git',
+381 info outdated     req: 'git+https://github.com/artificial-life/global-queue.git#experiments',
+381 info outdated     what: 'global-queue@git' },
+381 info outdated   { dep:
+381 info outdated      Node {
+381 info outdated        id: 198,
+381 info outdated        package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\gulp-changed',
+381 info outdated        realpath: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\gulp-changed',
+381 info outdated        parent: [Object],
+381 info outdated        isLink: false,
+381 info outdated        children: [Object],
+381 info outdated        error: null,
+381 info outdated        loaded: false,
+381 info outdated        requiredBy: [Object],
+381 info outdated        requires: [Object],
+381 info outdated        missingDeps: {},
+381 info outdated        missingDevDeps: {},
+381 info outdated        userRequired: false,
+381 info outdated        existing: false },
+381 info outdated     depname: 'gulp-changed',
+381 info outdated     current: '1.3.1',
+381 info outdated     wanted: '1.3.2',
+381 info outdated     latest: '1.3.2',
+381 info outdated     req: '^1.3.2',
+381 info outdated     what: 'gulp-changed@1.3.2' },
+381 info outdated   { dep:
+381 info outdated      Node {
+381 info outdated        id: 196,
+381 info outdated        package: [Object],
+381 info outdated        path: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\gulp-mocha',
+381 info outdated        realpath: 'C:\\Users\\user\\Documents\\GitHub\\iris-service-ticket\\node_modules\\gulp-mocha',
+381 info outdated        parent: [Object],
+381 info outdated        isLink: false,
+381 info outdated        children: [Object],
+381 info outdated        error: null,
+381 info outdated        loaded: false,
+381 info outdated        requiredBy: [Object],
+381 info outdated        requires: [Object],
+381 info outdated        missingDeps: {},
+381 info outdated        missingDevDeps: {},
+381 info outdated        userRequired: false,
+381 info outdated        existing: false },
+381 info outdated     depname: 'gulp-mocha',
+381 info outdated     current: '3.0.0',
+381 info outdated     wanted: '3.0.1',
+381 info outdated     latest: '3.0.1',
+381 info outdated     req: '^3.0.1',
+381 info outdated     what: 'gulp-mocha@3.0.1' } ]
+382 silly loadCurrentTree Starting
+383 silly install loadCurrentTree
+384 silly install readLocalPackageData
+385 silly fetchPackageMetaData babel-preset-es2015@6.14.0
+386 silly fetchPackageMetaData bluebird@3.4.3
+387 silly fetchPackageMetaData del@2.2.2
+388 silly fetchPackageMetaData gulp-changed@1.3.2
+389 silly fetchPackageMetaData gulp-mocha@3.0.1
+390 silly fetchPackageMetaData lodash@4.15.0
+391 silly fetchPackageMetaData git+https://github.com/YuuKohaku/rmf-on-rdf.git
+392 silly fetchPackageMetaData babel-preset-es2015@6.14.0
+393 silly fetchPackageMetaData del@2.2.2
+394 silly fetchPackageMetaData git+https://github.com/artificial-life/global-queue.git#experiments
+395 silly fetchPackageMetaData gulp-changed@1.3.2
+396 silly fetchPackageMetaData gulp-mocha@3.0.1
+397 silly fetchNamedPackageData babel-preset-es2015
+398 silly mapToRegistry name babel-preset-es2015
+399 silly mapToRegistry using default registry
+400 silly mapToRegistry registry https://registry.npmjs.org/
+401 silly mapToRegistry uri https://registry.npmjs.org/babel-preset-es2015
+402 silly fetchNamedPackageData bluebird
+403 silly mapToRegistry name bluebird
+404 silly mapToRegistry using default registry
+405 silly mapToRegistry registry https://registry.npmjs.org/
+406 silly mapToRegistry uri https://registry.npmjs.org/bluebird
+407 silly fetchNamedPackageData del
+408 silly mapToRegistry name del
+409 silly mapToRegistry using default registry
+410 silly mapToRegistry registry https://registry.npmjs.org/
+411 silly mapToRegistry uri https://registry.npmjs.org/del
+412 silly fetchNamedPackageData gulp-changed
+413 silly mapToRegistry name gulp-changed
+414 silly mapToRegistry using default registry
+415 silly mapToRegistry registry https://registry.npmjs.org/
+416 silly mapToRegistry uri https://registry.npmjs.org/gulp-changed
+417 silly fetchNamedPackageData gulp-mocha
+418 silly mapToRegistry name gulp-mocha
+419 silly mapToRegistry using default registry
+420 silly mapToRegistry registry https://registry.npmjs.org/
+421 silly mapToRegistry uri https://registry.npmjs.org/gulp-mocha
+422 silly fetchNamedPackageData lodash
+423 silly mapToRegistry name lodash
+424 silly mapToRegistry using default registry
+425 silly mapToRegistry registry https://registry.npmjs.org/
+426 silly mapToRegistry uri https://registry.npmjs.org/lodash
+427 silly fetchNamedPackageData babel-preset-es2015
+428 silly mapToRegistry name babel-preset-es2015
+429 silly mapToRegistry using default registry
+430 silly mapToRegistry registry https://registry.npmjs.org/
+431 silly mapToRegistry uri https://registry.npmjs.org/babel-preset-es2015
+432 silly fetchNamedPackageData del
+433 silly mapToRegistry name del
+434 silly mapToRegistry using default registry
+435 silly mapToRegistry registry https://registry.npmjs.org/
+436 silly mapToRegistry uri https://registry.npmjs.org/del
+437 silly fetchNamedPackageData gulp-changed
+438 silly mapToRegistry name gulp-changed
+439 silly mapToRegistry using default registry
+440 silly mapToRegistry registry https://registry.npmjs.org/
+441 silly mapToRegistry uri https://registry.npmjs.org/gulp-changed
+442 silly fetchNamedPackageData gulp-mocha
+443 silly mapToRegistry name gulp-mocha
+444 silly mapToRegistry using default registry
+445 silly mapToRegistry registry https://registry.npmjs.org/
+446 silly mapToRegistry uri https://registry.npmjs.org/gulp-mocha
+447 silly fetchOtherPackageData git+https://github.com/YuuKohaku/rmf-on-rdf.git
+448 silly cache add args [ 'git+https://github.com/YuuKohaku/rmf-on-rdf.git', null ]
+449 verbose cache add spec git+https://github.com/YuuKohaku/rmf-on-rdf.git
+450 silly fetchOtherPackageData git+https://github.com/artificial-life/global-queue.git#experiments
+451 silly cache add args [ 'git+https://github.com/artificial-life/global-queue.git#experiments',
+451 silly cache add   null ]
+452 verbose cache add spec git+https://github.com/artificial-life/global-queue.git#experiments
+453 silly cache add parsed spec Result {
+453 silly cache add   raw: 'git+https://github.com/YuuKohaku/rmf-on-rdf.git',
+453 silly cache add   scope: null,
+453 silly cache add   name: null,
+453 silly cache add   rawSpec: 'git+https://github.com/YuuKohaku/rmf-on-rdf.git',
+453 silly cache add   spec: 'git+https://github.com/YuuKohaku/rmf-on-rdf.git',
+453 silly cache add   type: 'hosted',
+453 silly cache add   hosted:
+453 silly cache add    { type: 'github',
+453 silly cache add      ssh: 'git@github.com:YuuKohaku/rmf-on-rdf.git',
+453 silly cache add      sshUrl: 'git+ssh://git@github.com/YuuKohaku/rmf-on-rdf.git',
+453 silly cache add      httpsUrl: 'git+https://github.com/YuuKohaku/rmf-on-rdf.git',
+453 silly cache add      gitUrl: 'git://github.com/YuuKohaku/rmf-on-rdf.git',
+453 silly cache add      shortcut: 'github:YuuKohaku/rmf-on-rdf',
+453 silly cache add      directUrl: 'https://raw.githubusercontent.com/YuuKohaku/rmf-on-rdf/master/package.json' } }
+454 verbose addRemoteGit caching git+https://github.com/YuuKohaku/rmf-on-rdf.git
+455 verbose addRemoteGit git+https://github.com/YuuKohaku/rmf-on-rdf.git is a repository hosted by github
+456 silly tryClone cloning git+https://github.com/YuuKohaku/rmf-on-rdf.git via git+https://github.com/YuuKohaku/rmf-on-rdf.git
+457 verbose tryClone git-https-github-com-YuuKohaku-rmf-on-rdf-git-e6c691fb not in flight; caching
+458 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+459 silly cache add parsed spec Result {
+459 silly cache add   raw: 'git+https://github.com/artificial-life/global-queue.git#experiments',
+459 silly cache add   scope: null,
+459 silly cache add   name: null,
+459 silly cache add   rawSpec: 'git+https://github.com/artificial-life/global-queue.git#experiments',
+459 silly cache add   spec: 'git+https://github.com/artificial-life/global-queue.git#experiments',
+459 silly cache add   type: 'hosted',
+459 silly cache add   hosted:
+459 silly cache add    { type: 'github',
+459 silly cache add      ssh: 'git@github.com:artificial-life/global-queue.git#experiments',
+459 silly cache add      sshUrl: 'git+ssh://git@github.com/artificial-life/global-queue.git#experiments',
+459 silly cache add      httpsUrl: 'git+https://github.com/artificial-life/global-queue.git#experiments',
+459 silly cache add      gitUrl: 'git://github.com/artificial-life/global-queue.git#experiments',
+459 silly cache add      shortcut: 'github:artificial-life/global-queue#experiments',
+459 silly cache add      directUrl: 'https://raw.githubusercontent.com/artificial-life/global-queue/experiments/package.json' } }
+460 verbose addRemoteGit caching git+https://github.com/artificial-life/global-queue.git#experiments
+461 verbose addRemoteGit git+https://github.com/artificial-life/global-queue.git#experiments is a repository hosted by github
+462 silly tryClone cloning git+https://github.com/artificial-life/global-queue.git#experiments via git+https://github.com/artificial-life/global-queue.git#experiments
+463 verbose tryClone git-https-github-com-artificial-life-global-queue-git-experiments-70226d59 not in flight; caching
+464 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache\_git-remotes correctMkdir already in flight; waiting
+465 verbose request uri https://registry.npmjs.org/babel-preset-es2015
+466 verbose request no auth needed
+467 info attempt registry request try #1 at 23:39:25
+468 verbose etag "ELD2D54RMTUNWELKV0OELXPCI"
+469 http request GET https://registry.npmjs.org/babel-preset-es2015
+470 verbose request uri https://registry.npmjs.org/del
+471 verbose request no auth needed
+472 info attempt registry request try #1 at 23:39:25
+473 verbose etag "8S2J5ZBHDP60HDVJ60ZL9JRU1"
+474 http request GET https://registry.npmjs.org/del
+475 verbose request uri https://registry.npmjs.org/bluebird
+476 verbose request no auth needed
+477 info attempt registry request try #1 at 23:39:25
+478 verbose etag "CY4587VF8H5E1S652EST39KP6"
+479 http request GET https://registry.npmjs.org/bluebird
+480 verbose request uri https://registry.npmjs.org/gulp-changed
+481 verbose request no auth needed
+482 info attempt registry request try #1 at 23:39:25
+483 verbose etag "52YMFZ2RKIAB6KPH1E1BWRNKD"
+484 http request GET https://registry.npmjs.org/gulp-changed
+485 verbose request uri https://registry.npmjs.org/gulp-mocha
+486 verbose request no auth needed
+487 info attempt registry request try #1 at 23:39:25
+488 verbose etag "D89NN6H2NW9FEPGTCAL69VA5O"
+489 http request GET https://registry.npmjs.org/gulp-mocha
+490 verbose request uri https://registry.npmjs.org/lodash
+491 verbose request no auth needed
+492 info attempt registry request try #1 at 23:39:25
+493 verbose etag "BSB2R0SUVK2T5JUT7QIX1SFMX"
+494 http request GET https://registry.npmjs.org/lodash
+495 verbose request uri https://registry.npmjs.org/babel-preset-es2015
+496 verbose request no auth needed
+497 info attempt registry request try #1 at 23:39:25
+498 verbose etag "ELD2D54RMTUNWELKV0OELXPCI"
+499 http request GET https://registry.npmjs.org/babel-preset-es2015
+500 verbose request uri https://registry.npmjs.org/del
+501 verbose request no auth needed
+502 info attempt registry request try #1 at 23:39:25
+503 verbose etag "8S2J5ZBHDP60HDVJ60ZL9JRU1"
+504 http request GET https://registry.npmjs.org/del
+505 verbose request uri https://registry.npmjs.org/gulp-changed
+506 verbose request no auth needed
+507 info attempt registry request try #1 at 23:39:25
+508 verbose etag "52YMFZ2RKIAB6KPH1E1BWRNKD"
+509 http request GET https://registry.npmjs.org/gulp-changed
+510 verbose request uri https://registry.npmjs.org/gulp-mocha
+511 verbose request no auth needed
+512 info attempt registry request try #1 at 23:39:25
+513 verbose etag "D89NN6H2NW9FEPGTCAL69VA5O"
+514 http request GET https://registry.npmjs.org/gulp-mocha
+515 http 304 https://registry.npmjs.org/gulp-mocha
+516 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+516 verbose headers   via: '1.1 varnish',
+516 verbose headers   'cache-control': 'max-age=300',
+516 verbose headers   etag: '"D89NN6H2NW9FEPGTCAL69VA5O"',
+516 verbose headers   age: '258',
+516 verbose headers   connection: 'keep-alive',
+516 verbose headers   'x-served-by': 'cache-fra1241-FRA',
+516 verbose headers   'x-cache': 'HIT',
+516 verbose headers   'x-cache-hits': '2',
+516 verbose headers   'x-timer': 'S1472316005.434397,VS0,VE0',
+516 verbose headers   vary: 'Accept-Encoding' }
+517 silly get cb [ 304,
+517 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+517 silly get     via: '1.1 varnish',
+517 silly get     'cache-control': 'max-age=300',
+517 silly get     etag: '"D89NN6H2NW9FEPGTCAL69VA5O"',
+517 silly get     age: '258',
+517 silly get     connection: 'keep-alive',
+517 silly get     'x-served-by': 'cache-fra1241-FRA',
+517 silly get     'x-cache': 'HIT',
+517 silly get     'x-cache-hits': '2',
+517 silly get     'x-timer': 'S1472316005.434397,VS0,VE0',
+517 silly get     vary: 'Accept-Encoding' } ]
+518 verbose etag https://registry.npmjs.org/gulp-mocha from cache
+519 verbose get saving gulp-mocha to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-mocha\.cache.json
+520 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+521 http 304 https://registry.npmjs.org/babel-preset-es2015
+522 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+522 verbose headers   via: '1.1 varnish',
+522 verbose headers   'cache-control': 'max-age=300',
+522 verbose headers   etag: '"ELD2D54RMTUNWELKV0OELXPCI"',
+522 verbose headers   age: '30',
+522 verbose headers   connection: 'keep-alive',
+522 verbose headers   'x-served-by': 'cache-fra1237-FRA',
+522 verbose headers   'x-cache': 'HIT',
+522 verbose headers   'x-cache-hits': '4',
+522 verbose headers   'x-timer': 'S1472316005.433265,VS0,VE0',
+522 verbose headers   vary: 'Accept-Encoding' }
+523 silly get cb [ 304,
+523 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+523 silly get     via: '1.1 varnish',
+523 silly get     'cache-control': 'max-age=300',
+523 silly get     etag: '"ELD2D54RMTUNWELKV0OELXPCI"',
+523 silly get     age: '30',
+523 silly get     connection: 'keep-alive',
+523 silly get     'x-served-by': 'cache-fra1237-FRA',
+523 silly get     'x-cache': 'HIT',
+523 silly get     'x-cache-hits': '4',
+523 silly get     'x-timer': 'S1472316005.433265,VS0,VE0',
+523 silly get     vary: 'Accept-Encoding' } ]
+524 verbose etag https://registry.npmjs.org/babel-preset-es2015 from cache
+525 verbose get saving babel-preset-es2015 to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-preset-es2015\.cache.json
+526 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+527 http 304 https://registry.npmjs.org/del
+528 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+528 verbose headers   via: '1.1 varnish',
+528 verbose headers   'cache-control': 'max-age=300',
+528 verbose headers   etag: '"8S2J5ZBHDP60HDVJ60ZL9JRU1"',
+528 verbose headers   age: '195',
+528 verbose headers   connection: 'keep-alive',
+528 verbose headers   'x-served-by': 'cache-fra1230-FRA',
+528 verbose headers   'x-cache': 'HIT',
+528 verbose headers   'x-cache-hits': '1',
+528 verbose headers   'x-timer': 'S1472316005.438095,VS0,VE0',
+528 verbose headers   vary: 'Accept-Encoding' }
+529 silly get cb [ 304,
+529 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+529 silly get     via: '1.1 varnish',
+529 silly get     'cache-control': 'max-age=300',
+529 silly get     etag: '"8S2J5ZBHDP60HDVJ60ZL9JRU1"',
+529 silly get     age: '195',
+529 silly get     connection: 'keep-alive',
+529 silly get     'x-served-by': 'cache-fra1230-FRA',
+529 silly get     'x-cache': 'HIT',
+529 silly get     'x-cache-hits': '1',
+529 silly get     'x-timer': 'S1472316005.438095,VS0,VE0',
+529 silly get     vary: 'Accept-Encoding' } ]
+530 verbose etag https://registry.npmjs.org/del from cache
+531 verbose get saving del to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\del\.cache.json
+532 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+533 http 304 https://registry.npmjs.org/gulp-changed
+534 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+534 verbose headers   via: '1.1 varnish',
+534 verbose headers   'cache-control': 'max-age=300',
+534 verbose headers   etag: '"52YMFZ2RKIAB6KPH1E1BWRNKD"',
+534 verbose headers   age: '204',
+534 verbose headers   connection: 'keep-alive',
+534 verbose headers   'x-served-by': 'cache-fra1248-FRA',
+534 verbose headers   'x-cache': 'HIT',
+534 verbose headers   'x-cache-hits': '2',
+534 verbose headers   'x-timer': 'S1472316005.438273,VS0,VE0',
+534 verbose headers   vary: 'Accept-Encoding' }
+535 silly get cb [ 304,
+535 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+535 silly get     via: '1.1 varnish',
+535 silly get     'cache-control': 'max-age=300',
+535 silly get     etag: '"52YMFZ2RKIAB6KPH1E1BWRNKD"',
+535 silly get     age: '204',
+535 silly get     connection: 'keep-alive',
+535 silly get     'x-served-by': 'cache-fra1248-FRA',
+535 silly get     'x-cache': 'HIT',
+535 silly get     'x-cache-hits': '2',
+535 silly get     'x-timer': 'S1472316005.438273,VS0,VE0',
+535 silly get     vary: 'Accept-Encoding' } ]
+536 verbose etag https://registry.npmjs.org/gulp-changed from cache
+537 verbose get saving gulp-changed to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-changed\.cache.json
+538 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+539 http 304 https://registry.npmjs.org/bluebird
+540 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+540 verbose headers   via: '1.1 varnish',
+540 verbose headers   'cache-control': 'max-age=300',
+540 verbose headers   etag: '"CY4587VF8H5E1S652EST39KP6"',
+540 verbose headers   age: '266',
+540 verbose headers   connection: 'keep-alive',
+540 verbose headers   'x-served-by': 'cache-fra1235-FRA',
+540 verbose headers   'x-cache': 'HIT',
+540 verbose headers   'x-cache-hits': '3',
+540 verbose headers   'x-timer': 'S1472316005.445936,VS0,VE0',
+540 verbose headers   vary: 'Accept-Encoding' }
+541 silly get cb [ 304,
+541 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+541 silly get     via: '1.1 varnish',
+541 silly get     'cache-control': 'max-age=300',
+541 silly get     etag: '"CY4587VF8H5E1S652EST39KP6"',
+541 silly get     age: '266',
+541 silly get     connection: 'keep-alive',
+541 silly get     'x-served-by': 'cache-fra1235-FRA',
+541 silly get     'x-cache': 'HIT',
+541 silly get     'x-cache-hits': '3',
+541 silly get     'x-timer': 'S1472316005.445936,VS0,VE0',
+541 silly get     vary: 'Accept-Encoding' } ]
+542 verbose etag https://registry.npmjs.org/bluebird from cache
+543 verbose get saving bluebird to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\bluebird\.cache.json
+544 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+545 http 304 https://registry.npmjs.org/lodash
+546 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+546 verbose headers   via: '1.1 varnish',
+546 verbose headers   'cache-control': 'max-age=300',
+546 verbose headers   etag: '"BSB2R0SUVK2T5JUT7QIX1SFMX"',
+546 verbose headers   age: '13',
+546 verbose headers   connection: 'keep-alive',
+546 verbose headers   'x-served-by': 'cache-fra1235-FRA',
+546 verbose headers   'x-cache': 'HIT',
+546 verbose headers   'x-cache-hits': '1',
+546 verbose headers   'x-timer': 'S1472316005.445776,VS0,VE0',
+546 verbose headers   vary: 'Accept-Encoding' }
+547 silly get cb [ 304,
+547 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+547 silly get     via: '1.1 varnish',
+547 silly get     'cache-control': 'max-age=300',
+547 silly get     etag: '"BSB2R0SUVK2T5JUT7QIX1SFMX"',
+547 silly get     age: '13',
+547 silly get     connection: 'keep-alive',
+547 silly get     'x-served-by': 'cache-fra1235-FRA',
+547 silly get     'x-cache': 'HIT',
+547 silly get     'x-cache-hits': '1',
+547 silly get     'x-timer': 'S1472316005.445776,VS0,VE0',
+547 silly get     vary: 'Accept-Encoding' } ]
+548 verbose etag https://registry.npmjs.org/lodash from cache
+549 verbose get saving lodash to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\lodash\.cache.json
+550 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+551 http 304 https://registry.npmjs.org/gulp-mocha
+552 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+552 verbose headers   via: '1.1 varnish',
+552 verbose headers   'cache-control': 'max-age=300',
+552 verbose headers   etag: '"D89NN6H2NW9FEPGTCAL69VA5O"',
+552 verbose headers   age: '259',
+552 verbose headers   connection: 'keep-alive',
+552 verbose headers   'x-served-by': 'cache-fra1245-FRA',
+552 verbose headers   'x-cache': 'HIT',
+552 verbose headers   'x-cache-hits': '2',
+552 verbose headers   'x-timer': 'S1472316005.619593,VS0,VE0',
+552 verbose headers   vary: 'Accept-Encoding' }
+553 silly get cb [ 304,
+553 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+553 silly get     via: '1.1 varnish',
+553 silly get     'cache-control': 'max-age=300',
+553 silly get     etag: '"D89NN6H2NW9FEPGTCAL69VA5O"',
+553 silly get     age: '259',
+553 silly get     connection: 'keep-alive',
+553 silly get     'x-served-by': 'cache-fra1245-FRA',
+553 silly get     'x-cache': 'HIT',
+553 silly get     'x-cache-hits': '2',
+553 silly get     'x-timer': 'S1472316005.619593,VS0,VE0',
+553 silly get     vary: 'Accept-Encoding' } ]
+554 verbose etag https://registry.npmjs.org/gulp-mocha from cache
+555 verbose get saving gulp-mocha to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-mocha\.cache.json
+556 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+557 http 304 https://registry.npmjs.org/del
+558 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+558 verbose headers   via: '1.1 varnish',
+558 verbose headers   'cache-control': 'max-age=300',
+558 verbose headers   etag: '"8S2J5ZBHDP60HDVJ60ZL9JRU1"',
+558 verbose headers   age: '195',
+558 verbose headers   connection: 'keep-alive',
+558 verbose headers   'x-served-by': 'cache-fra1230-FRA',
+558 verbose headers   'x-cache': 'HIT',
+558 verbose headers   'x-cache-hits': '2',
+558 verbose headers   'x-timer': 'S1472316005.624216,VS0,VE0',
+558 verbose headers   vary: 'Accept-Encoding' }
+559 silly get cb [ 304,
+559 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+559 silly get     via: '1.1 varnish',
+559 silly get     'cache-control': 'max-age=300',
+559 silly get     etag: '"8S2J5ZBHDP60HDVJ60ZL9JRU1"',
+559 silly get     age: '195',
+559 silly get     connection: 'keep-alive',
+559 silly get     'x-served-by': 'cache-fra1230-FRA',
+559 silly get     'x-cache': 'HIT',
+559 silly get     'x-cache-hits': '2',
+559 silly get     'x-timer': 'S1472316005.624216,VS0,VE0',
+559 silly get     vary: 'Accept-Encoding' } ]
+560 verbose etag https://registry.npmjs.org/del from cache
+561 verbose get saving del to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\del\.cache.json
+562 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+563 http 304 https://registry.npmjs.org/gulp-changed
+564 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+564 verbose headers   via: '1.1 varnish',
+564 verbose headers   'cache-control': 'max-age=300',
+564 verbose headers   etag: '"52YMFZ2RKIAB6KPH1E1BWRNKD"',
+564 verbose headers   age: '204',
+564 verbose headers   connection: 'keep-alive',
+564 verbose headers   'x-served-by': 'cache-fra1221-FRA',
+564 verbose headers   'x-cache': 'HIT',
+564 verbose headers   'x-cache-hits': '2',
+564 verbose headers   'x-timer': 'S1472316005.623998,VS0,VE0',
+564 verbose headers   vary: 'Accept-Encoding' }
+565 silly get cb [ 304,
+565 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+565 silly get     via: '1.1 varnish',
+565 silly get     'cache-control': 'max-age=300',
+565 silly get     etag: '"52YMFZ2RKIAB6KPH1E1BWRNKD"',
+565 silly get     age: '204',
+565 silly get     connection: 'keep-alive',
+565 silly get     'x-served-by': 'cache-fra1221-FRA',
+565 silly get     'x-cache': 'HIT',
+565 silly get     'x-cache-hits': '2',
+565 silly get     'x-timer': 'S1472316005.623998,VS0,VE0',
+565 silly get     vary: 'Accept-Encoding' } ]
+566 verbose etag https://registry.npmjs.org/gulp-changed from cache
+567 verbose get saving gulp-changed to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-changed\.cache.json
+568 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+569 http 304 https://registry.npmjs.org/babel-preset-es2015
+570 verbose headers { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+570 verbose headers   via: '1.1 varnish',
+570 verbose headers   'cache-control': 'max-age=300',
+570 verbose headers   etag: '"ELD2D54RMTUNWELKV0OELXPCI"',
+570 verbose headers   age: '30',
+570 verbose headers   connection: 'keep-alive',
+570 verbose headers   'x-served-by': 'cache-fra1243-FRA',
+570 verbose headers   'x-cache': 'HIT',
+570 verbose headers   'x-cache-hits': '2',
+570 verbose headers   'x-timer': 'S1472316005.624355,VS0,VE0',
+570 verbose headers   vary: 'Accept-Encoding' }
+571 silly get cb [ 304,
+571 silly get   { date: 'Sat, 27 Aug 2016 16:40:05 GMT',
+571 silly get     via: '1.1 varnish',
+571 silly get     'cache-control': 'max-age=300',
+571 silly get     etag: '"ELD2D54RMTUNWELKV0OELXPCI"',
+571 silly get     age: '30',
+571 silly get     connection: 'keep-alive',
+571 silly get     'x-served-by': 'cache-fra1243-FRA',
+571 silly get     'x-cache': 'HIT',
+571 silly get     'x-cache-hits': '2',
+571 silly get     'x-timer': 'S1472316005.624355,VS0,VE0',
+571 silly get     vary: 'Accept-Encoding' } ]
+572 verbose etag https://registry.npmjs.org/babel-preset-es2015 from cache
+573 verbose get saving babel-preset-es2015 to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\babel-preset-es2015\.cache.json
+574 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+575 info git [ 'config', '--get', 'remote.origin.url' ]
+576 info git [ 'config', '--get', 'remote.origin.url' ]
+577 silly validateExistingRemote git+https://github.com/YuuKohaku/rmf-on-rdf.git remote.origin.url: https://github.com/YuuKohaku/rmf-on-rdf.git
+578 verbose validateExistingRemote git+https://github.com/YuuKohaku/rmf-on-rdf.git is updating existing cached remote C:\Users\user\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-YuuKohaku-rmf-on-rdf-git-e6c691fb
+579 silly validateExistingRemote git+https://github.com/artificial-life/global-queue.git#experiments remote.origin.url: https://github.com/artificial-life/global-queue.git
+580 verbose validateExistingRemote git+https://github.com/artificial-life/global-queue.git#experiments is updating existing cached remote C:\Users\user\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-artificial-life-global-queue-git-experiments-70226d59
+581 info git [ 'fetch', '-a', 'origin' ]
+582 info git [ 'fetch', '-a', 'origin' ]
+583 verbose updateRemote git fetch -a origin (https://github.com/YuuKohaku/rmf-on-rdf.git)
+584 verbose setPermissions git+https://github.com/YuuKohaku/rmf-on-rdf.git skipping chownr on Windows
+585 verbose resolveHead git+https://github.com/YuuKohaku/rmf-on-rdf.git original treeish: master
+586 info git [ 'rev-list', '-n1', 'master' ]
+587 verbose updateRemote git fetch -a origin (https://github.com/artificial-life/global-queue.git)
+588 verbose setPermissions git+https://github.com/artificial-life/global-queue.git#experiments skipping chownr on Windows
+589 verbose resolveHead git+https://github.com/artificial-life/global-queue.git#experiments original treeish: experiments
+590 silly resolveHead git+https://github.com/YuuKohaku/rmf-on-rdf.git resolved treeish: 7c8eb131f1df66c076c751ccb6c62aa9e147d1f0
+591 verbose resolveHead git+https://github.com/YuuKohaku/rmf-on-rdf.git resolved Git URL: git+https://github.com/YuuKohaku/rmf-on-rdf.git#7c8eb131f1df66c076c751ccb6c62aa9e147d1f0
+592 silly resolveHead Git working directory: C:\Users\user\AppData\Local\Temp\npm-35716-58c3859e\git-cache-e9738194\7c8eb131f1df66c076c751ccb6c62aa9e147d1f0
+593 info git [ 'rev-list', '-n1', 'experiments' ]
+594 silly resolveHead git+https://github.com/artificial-life/global-queue.git#experiments resolved treeish: 049496bde4bedcc3d68407d0f88f7b99095737c7
+595 verbose resolveHead git+https://github.com/artificial-life/global-queue.git#experiments resolved Git URL: git+https://github.com/artificial-life/global-queue.git#049496bde4bedcc3d68407d0f88f7b99095737c7
+596 silly resolveHead Git working directory: C:\Users\user\AppData\Local\Temp\npm-35716-58c3859e\git-cache-adbf72ed\049496bde4bedcc3d68407d0f88f7b99095737c7
+597 info git [ 'clone',
+597 info git   'C:\\Users\\user\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-https-github-com-YuuKohaku-rmf-on-rdf-git-e6c691fb',
+597 info git   'C:\\Users\\user\\AppData\\Local\\Temp\\npm-35716-58c3859e\\git-cache-e9738194\\7c8eb131f1df66c076c751ccb6c62aa9e147d1f0' ]
+598 info git [ 'clone',
+598 info git   'C:\\Users\\user\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-https-github-com-artificial-life-global-queue-git-experiments-70226d59',
+598 info git   'C:\\Users\\user\\AppData\\Local\\Temp\\npm-35716-58c3859e\\git-cache-adbf72ed\\049496bde4bedcc3d68407d0f88f7b99095737c7' ]
+599 verbose cloneResolved git+https://github.com/artificial-life/global-queue.git#experiments clone Cloning into 'C:\Users\user\AppData\Local\Temp\npm-35716-58c3859e\git-cache-adbf72ed\049496bde4bedcc3d68407d0f88f7b99095737c7'...
+599 verbose cloneResolved done.
+600 info git [ 'checkout', '049496bde4bedcc3d68407d0f88f7b99095737c7' ]
+601 verbose checkoutTreeish git+https://github.com/artificial-life/global-queue.git#experiments checkout Note: checking out '049496bde4bedcc3d68407d0f88f7b99095737c7'.
+601 verbose checkoutTreeish
+601 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
+601 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
+601 verbose checkoutTreeish state without impacting any branches by performing another checkout.
+601 verbose checkoutTreeish
+601 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
+601 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
+601 verbose checkoutTreeish
+601 verbose checkoutTreeish   git checkout -b <new-branch-name>
+601 verbose checkoutTreeish
+601 verbose checkoutTreeish HEAD is now at 049496b... command pattern
+602 info git [ 'submodule', '-q', 'update', '--init', '--recursive' ]
+603 verbose cloneResolved git+https://github.com/YuuKohaku/rmf-on-rdf.git clone Cloning into 'C:\Users\user\AppData\Local\Temp\npm-35716-58c3859e\git-cache-e9738194\7c8eb131f1df66c076c751ccb6c62aa9e147d1f0'...
+603 verbose cloneResolved done.
+604 info git [ 'checkout', '7c8eb131f1df66c076c751ccb6c62aa9e147d1f0' ]
+605 verbose checkoutTreeish git+https://github.com/YuuKohaku/rmf-on-rdf.git checkout Note: checking out '7c8eb131f1df66c076c751ccb6c62aa9e147d1f0'.
+605 verbose checkoutTreeish
+605 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
+605 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
+605 verbose checkoutTreeish state without impacting any branches by performing another checkout.
+605 verbose checkoutTreeish
+605 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
+605 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
+605 verbose checkoutTreeish
+605 verbose checkoutTreeish   git checkout -b <new-branch-name>
+605 verbose checkoutTreeish
+605 verbose checkoutTreeish HEAD is now at 7c8eb13... Rd field history_enabled
+606 info git [ 'submodule', '-q', 'update', '--init', '--recursive' ]
+607 verbose updateSubmodules git+https://github.com/YuuKohaku/rmf-on-rdf.git submodule update
+608 verbose addLocalDirectory C:\Users\user\AppData\Roaming\npm-cache\resource-management-framework\1.0.0\package.tgz not in flight; packing
+609 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+610 verbose tar pack [ 'C:\\Users\\user\\AppData\\Roaming\\npm-cache\\resource-management-framework\\1.0.0\\package.tgz',
+610 verbose tar pack   'C:\\Users\\user\\AppData\\Local\\Temp\\npm-35716-58c3859e\\git-cache-e9738194\\7c8eb131f1df66c076c751ccb6c62aa9e147d1f0' ]
+611 verbose tarball C:\Users\user\AppData\Roaming\npm-cache\resource-management-framework\1.0.0\package.tgz
+612 verbose folder C:\Users\user\AppData\Local\Temp\npm-35716-58c3859e\git-cache-e9738194\7c8eb131f1df66c076c751ccb6c62aa9e147d1f0
+613 verbose addLocalTarball adding from inside cache C:\Users\user\AppData\Roaming\npm-cache\resource-management-framework\1.0.0\package.tgz
+614 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+615 verbose addRemoteGit data._from: git+https://github.com/YuuKohaku/rmf-on-rdf.git
+616 verbose addRemoteGit data._resolved: git+https://github.com/YuuKohaku/rmf-on-rdf.git#7c8eb131f1df66c076c751ccb6c62aa9e147d1f0
+617 silly cache afterAdd resource-management-framework@1.0.0
+618 verbose afterAdd C:\Users\user\AppData\Roaming\npm-cache\resource-management-framework\1.0.0\package\package.json not in flight; writing
+619 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+620 verbose afterAdd C:\Users\user\AppData\Roaming\npm-cache\resource-management-framework\1.0.0\package\package.json written
+621 verbose updateSubmodules git+https://github.com/artificial-life/global-queue.git#experiments submodule update
+622 verbose addLocalDirectory C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz not in flight; packing
+623 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+624 verbose tar pack [ 'C:\\Users\\user\\AppData\\Roaming\\npm-cache\\global-queue\\1.5.0\\package.tgz',
+624 verbose tar pack   'C:\\Users\\user\\AppData\\Local\\Temp\\npm-35716-58c3859e\\git-cache-adbf72ed\\049496bde4bedcc3d68407d0f88f7b99095737c7' ]
+625 verbose tarball C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz
+626 verbose folder C:\Users\user\AppData\Local\Temp\npm-35716-58c3859e\git-cache-adbf72ed\049496bde4bedcc3d68407d0f88f7b99095737c7
+627 error tar.pack Could not write C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz
+628 error addLocalDirectory Could not pack C:\Users\user\AppData\Local\Temp\npm-35716-58c3859e\git-cache-adbf72ed\049496bde4bedcc3d68407d0f88f7b99095737c7 to C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz
+629 error addLocal Could not install C:\Users\user\AppData\Local\Temp\npm-35716-58c3859e\git-cache-adbf72ed\049496bde4bedcc3d68407d0f88f7b99095737c7
+630 silly fetchPackageMetaData Error: EPERM: operation not permitted, rename 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz.3467828764' -> 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz'
+630 silly fetchPackageMetaData     at Error (native)
+630 silly fetchPackageMetaData  error for git+https://github.com/artificial-life/global-queue.git#experiments { Error: EPERM: operation not permitted, rename 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz.3467828764' -> 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz'
+630 silly fetchPackageMetaData     at Error (native)
+630 silly fetchPackageMetaData   errno: -4048,
+630 silly fetchPackageMetaData   code: 'EPERM',
+630 silly fetchPackageMetaData   syscall: 'rename',
+630 silly fetchPackageMetaData   path: 'C:\\Users\\user\\AppData\\Roaming\\npm-cache\\global-queue\\1.5.0\\package.tgz.3467828764',
+630 silly fetchPackageMetaData   dest: 'C:\\Users\\user\\AppData\\Roaming\\npm-cache\\global-queue\\1.5.0\\package.tgz' }
+631 silly rollbackFailedOptional Starting
+632 silly rollbackFailedOptional Finishing
+633 silly runTopLevelLifecycles Starting
+634 silly runTopLevelLifecycles Finishing
+635 silly install printInstalled
+636 verbose stack Error: EPERM: operation not permitted, rename 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz.3467828764' -> 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz'
+636 verbose stack     at Error (native)
+637 verbose cwd C:\Users\user\Documents\GitHub\iris-service-ticket
+638 error Windows_NT 10.0.10586
+639 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "update"
+640 error node v6.1.0
+641 error npm  v3.7.3
+642 error path C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz.3467828764
+643 error code EPERM
+644 error errno -4048
+645 error syscall rename
+646 error Error: EPERM: operation not permitted, rename 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz.3467828764' -> 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz'
+646 error     at Error (native)
+646 error  { Error: EPERM: operation not permitted, rename 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz.3467828764' -> 'C:\Users\user\AppData\Roaming\npm-cache\global-queue\1.5.0\package.tgz'
+646 error     at Error (native)
+646 error   errno: -4048,
+646 error   code: 'EPERM',
+646 error   syscall: 'rename',
+646 error   path: 'C:\\Users\\user\\AppData\\Roaming\\npm-cache\\global-queue\\1.5.0\\package.tgz.3467828764',
+646 error   dest: 'C:\\Users\\user\\AppData\\Roaming\\npm-cache\\global-queue\\1.5.0\\package.tgz' }
+647 error Please try running this command again as root/Administrator.
+648 verbose exit [ -4048, true ]
