@@ -76,7 +76,7 @@ class Ticket {
 				return false;
 		}
 		if (operation == 'restore')
-			if (from == 'closed')
+			if (from == 'closed' || from == 'expired')
 				return true;
 		return !!allowed_transform[_.join([from, to], "=>")] && !allowed_transform[_.join(['*', to], "=>")];
 	}
