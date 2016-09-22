@@ -3,6 +3,8 @@
 
 let TicketApi = require('resource-management-framework')
 	.TicketApi;
+// let Patchwerk = require('patchwerk');
+
 
 class Ticket {
 	constructor() {
@@ -12,6 +14,8 @@ class Ticket {
 	init() {
 		this.iris = new TicketApi();
 		this.iris.initContent();
+
+		// this.patchwerk = Patchwerk(this.emitter);
 	}
 
 	launch() {
@@ -71,12 +75,16 @@ class Ticket {
 			if (from == 'processing' || from == 'called' || from == 'postponed')
 				return false;
 		}
+		if (operation == 'restore')
+			if (from == 'closed' || from == 'expired')
+				return true;
 		return !!allowed_transform[_.join([from, to], "=>")] && !allowed_transform[_.join(['*', to], "=>")];
 	}
 
 	actionChangeState({
 		ticket,
 		state,
+		operation,
 		fields = {},
 		unset = [],
 		unlock = []
@@ -91,7 +99,8 @@ class Ticket {
 				let old_state = tick_data.state;
 				if (!this.actionCanChangeState({
 						from: old_state,
-						to: state
+						to: state,
+						operation: operation
 					}))
 					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
