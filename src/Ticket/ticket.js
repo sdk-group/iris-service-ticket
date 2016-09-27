@@ -110,7 +110,7 @@ class Ticket {
 				_.map(unset, v => {
 					let lock = _.get(tick_data, ['locked_fields', v], false);
 					if (!lock) {
-						_.unset(tick_data, v);
+						_.set(tick_data, v, null);
 					} else {
 						tick_data[v] = lock;
 					}
