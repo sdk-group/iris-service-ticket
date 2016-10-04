@@ -75,6 +75,10 @@ class Ticket {
 			if (from == 'processing' || from == 'called' || from == 'postponed')
 				return false;
 		}
+		if (operation == 'route') {
+			if (from == 'processing' || from == 'called')
+				return true;
+		}
 		if (operation == 'restore')
 			if (from == 'closed' || from == 'expired')
 				return true;
@@ -144,7 +148,6 @@ class Ticket {
 	}) {
 		return this.iris.getCodeLookup(code)
 			.then((res) => {
-				console.log(res);
 				if (!res) {
 					return Promise.resolve({});
 				}
