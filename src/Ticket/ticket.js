@@ -76,7 +76,7 @@ class Ticket {
 				return false;
 		}
 		if (operation == 'route') {
-			if (from == 'processing' || from == 'called')
+			if (from == 'processing' || from == 'called' || from == 'registered')
 				return true;
 		}
 		if (operation == 'restore')
