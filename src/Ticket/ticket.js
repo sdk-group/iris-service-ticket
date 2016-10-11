@@ -80,7 +80,7 @@ class Ticket {
 				return true;
 		}
 		if (operation == 'postpone-pack' || operation == 'expire-pack') {
-			if (from == 'registered')
+			if (from == 'registered' || from == 'postponed')
 				return true;
 		}
 		if (operation == 'restore')
