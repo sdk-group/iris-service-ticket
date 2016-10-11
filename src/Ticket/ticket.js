@@ -76,8 +76,12 @@ class Ticket {
 				return false;
 		}
 		if (operation == 'route') {
-			// if (from == 'processing' || from == 'called' || from == 'registered' || from == 'postponed')
-			return true;
+			if (from == 'processing' || from == 'called' || from == 'registered' || from == 'postponed')
+				return true;
+		}
+		if (operation == 'postpone-pack' || operation == 'expire-pack') {
+			if (from == 'registered')
+				return true;
 		}
 		if (operation == 'restore')
 			if (from == 'closed' || from == 'expired')
