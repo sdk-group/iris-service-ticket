@@ -185,14 +185,39 @@ class Ticket {
 	}
 
 	actionHistory({
-		ticket
+		code
 	}) {
-		let events = ['call', 'register', 'book', 'remove', 'restore', 'closed', 'postpone', 'expire', 'processing'];
-		return this.iris.getTicket({
-				keys: ticket
+		let tick;
+		return this.actionByCode({
+				code
 			})
-			.then((res) => {
-				return _.filter(_.get(res, `${ticket}.history`), (ent) => !!~_.indexOf(events, ent.event_name));
+			.then(({
+				ticket
+			}) => {
+				tick = ticket;
+				let session = ticket.session;
+				return this.emitter.addTask('database.getMulti', {
+					args: [[session]]
+				});
+			})
+			.then((session) => {
+				return this.emitter.addTask('database.getMulti', {
+					args: [session[tick.session].value.uses]
+				});
+			})
+			.then(tickets => {
+				let fin_history = Array((tick.inheritance_counter || 0));
+				_.map(tickets, ticket => {
+					if (ticket.value.inherits == tick.id) {
+						fin_history[ticket.value.inheritance_level - 1] = ticket.value.history;
+					}
+				});
+				tick.history = tick.history.concat(_.flatten(fin_history));
+
+				return {
+					ticket: tick,
+					success: true
+				}
 			});
 	}
 
