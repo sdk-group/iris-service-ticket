@@ -71,13 +71,23 @@ class Ticket {
 			"processing=>postponed": true,
 			"processing=>registered": true
 		};
+		console.log("----------------------------------------------------------------", from, to, operation);
 		if (operation == 'activate') {
 			if (from == 'processing' || from == 'called' || from == 'postponed')
 				return false;
 		}
-		if (operation == 'route') {
-			if (from == 'processing' || from == 'called' || from == 'registered' || from == 'postponed')
+		if (operation == 'route-operator') {
+			if (from == 'registered' || from == 'postponed')
+				return false;
+			if (from == 'processing' || from == 'called')
 				return true;
+		}
+
+		if (operation == 'route-reception') {
+			if (from == 'registered' || from == 'postponed')
+				return true;
+			if (from == 'processing' || from == 'called')
+				return false;
 		}
 		if (operation == 'postpone-pack' || operation == 'expire-pack') {
 			if (from == 'registered' || from == 'postponed')
@@ -192,8 +202,12 @@ class Ticket {
 				code
 			})
 			.then(({
+				success,
+				reason,
 				ticket
 			}) => {
+				if (!success)
+					return Promise.reject(new Error(reason));
 				tick = ticket;
 				let session = ticket.session;
 				return this.emitter.addTask('database.getMulti', {
@@ -218,6 +232,12 @@ class Ticket {
 					ticket: tick,
 					success: true
 				}
+			})
+			.catch((err) => {
+				return {
+					success: false,
+					reason: err.message
+				};
 			});
 	}
 
