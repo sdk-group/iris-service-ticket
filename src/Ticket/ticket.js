@@ -62,7 +62,6 @@ class Ticket {
 			"booked=>registered": true,
 			"booked=>removed": true,
 			"booked=>expired": true,
-			"called=>removed": true,
 			"called=>registered": true,
 			"called=>expired": true,
 			"called=>processing": true,
@@ -81,6 +80,13 @@ class Ticket {
 				return false;
 			if (from == 'processing' || from == 'called')
 				return true;
+		}
+		if (operation == 'remove') {
+			// if (from == 'processing' || from == 'called' || from == 'closed' || from == 'expired')
+			// 	return false;
+			// else
+			// 	return true;
+			to = 'removed';
 		}
 
 		if (operation == 'route-reception') {
