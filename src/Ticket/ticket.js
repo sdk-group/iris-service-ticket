@@ -59,6 +59,7 @@ class Ticket {
 			"registered=>registered": true,
 			"postponed=>called": true,
 			"postponed=>registered": true,
+			"postponed=>removed": true,
 			"booked=>registered": true,
 			"booked=>removed": true,
 			"booked=>expired": true,
