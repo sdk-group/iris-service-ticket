@@ -59,10 +59,10 @@ class Ticket {
 			"registered=>registered": true,
 			"postponed=>called": true,
 			"postponed=>registered": true,
+			"postponed=>removed": true,
 			"booked=>registered": true,
 			"booked=>removed": true,
 			"booked=>expired": true,
-			"called=>removed": true,
 			"called=>registered": true,
 			"called=>expired": true,
 			"called=>processing": true,
@@ -71,9 +71,34 @@ class Ticket {
 			"processing=>postponed": true,
 			"processing=>registered": true
 		};
+		console.log("----------------------------------------------------------------", from, to, operation);
 		if (operation == 'activate') {
 			if (from == 'processing' || from == 'called' || from == 'postponed')
 				return false;
+		}
+		if (operation == 'route-operator') {
+			if (from == 'registered' || from == 'postponed')
+				return false;
+			if (from == 'processing' || from == 'called')
+				return true;
+		}
+		if (operation == 'remove') {
+			// if (from == 'processing' || from == 'called' || from == 'closed' || from == 'expired')
+			// 	return false;
+			// else
+			// 	return true;
+			to = 'removed';
+		}
+
+		if (operation == 'route-reception') {
+			if (from == 'registered' || from == 'postponed')
+				return true;
+			if (from == 'processing' || from == 'called')
+				return false;
+		}
+		if (operation == 'postpone-pack' || operation == 'expire-pack') {
+			if (from == 'registered' || from == 'postponed')
+				return true;
 		}
 		if (operation == 'restore')
 			if (from == 'closed' || from == 'expired')
@@ -110,7 +135,7 @@ class Ticket {
 				_.map(unset, v => {
 					let lock = _.get(tick_data, ['locked_fields', v], false);
 					if (!lock) {
-						_.unset(tick_data, v);
+						_.set(tick_data, v, null);
 					} else {
 						tick_data[v] = lock;
 					}
@@ -144,7 +169,6 @@ class Ticket {
 	}) {
 		return this.iris.getCodeLookup(code)
 			.then((res) => {
-				console.log(res);
 				if (!res) {
 					return Promise.resolve({});
 				}
@@ -178,14 +202,49 @@ class Ticket {
 	}
 
 	actionHistory({
-		ticket
+		code
 	}) {
-		let events = ['call', 'register', 'book', 'remove', 'restore', 'closed', 'postpone', 'expire', 'processing'];
-		return this.iris.getTicket({
-				keys: ticket
+		let tick;
+		return this.actionByCode({
+				code
 			})
-			.then((res) => {
-				return _.filter(_.get(res, `${ticket}.history`), (ent) => !!~_.indexOf(events, ent.event_name));
+			.then(({
+				success,
+				reason,
+				ticket
+			}) => {
+				if (!success)
+					return Promise.reject(new Error(reason));
+				tick = ticket;
+				let session = ticket.session;
+				return this.emitter.addTask('database.getMulti', {
+					args: [[session]]
+				});
+			})
+			.then((session) => {
+				return this.emitter.addTask('database.getMulti', {
+					args: [session[tick.session].value.uses]
+				});
+			})
+			.then(tickets => {
+				let fin_history = Array((tick.inheritance_counter || 0));
+				_.map(tickets, ticket => {
+					if (ticket.value.inherits == tick.id) {
+						fin_history[ticket.value.inheritance_level - 1] = ticket.value.history;
+					}
+				});
+				tick.history = tick.history.concat(_.flatten(fin_history));
+
+				return {
+					ticket: tick,
+					success: true
+				}
+			})
+			.catch((err) => {
+				return {
+					success: false,
+					reason: err.message
+				};
 			});
 	}
 
