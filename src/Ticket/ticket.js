@@ -71,7 +71,7 @@ class Ticket {
 			"processing=>postponed": true,
 			"processing=>registered": true
 		};
-		console.log("----------------------------------------------------------------", from, to, operation);
+		// console.log("----------------------------------------------------------------", from, to, operation);
 		if (operation == 'activate') {
 			if (from == 'processing' || from == 'called' || from == 'postponed')
 				return false;
@@ -82,13 +82,13 @@ class Ticket {
 			if (from == 'processing' || from == 'called')
 				return true;
 		}
-		if (operation == 'remove') {
-			// if (from == 'processing' || from == 'called' || from == 'closed' || from == 'expired')
-			// 	return false;
-			// else
-			// 	return true;
-			to = 'removed';
-		}
+		// if (operation == 'remove') {
+		// if (from == 'processing' || from == 'called' || from == 'closed' || from == 'expired')
+		// 	return false;
+		// else
+		// 	return true;
+		// to = 'removed';
+		// }
 
 		if (operation == 'route-reception') {
 			if (from == 'registered' || from == 'postponed')
@@ -101,8 +101,10 @@ class Ticket {
 				return true;
 		}
 		if (operation == 'restore')
-			if (from == 'closed' || from == 'expired')
+			if (from == 'expired' || from == 'removed')
 				return true;
+			else
+				return false;
 		return !!allowed_transform[_.join([from, to], "=>")] && !allowed_transform[_.join(['*', to], "=>")];
 	}
 
