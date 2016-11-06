@@ -100,6 +100,10 @@ class Ticket {
 			if (from == 'registered' || from == 'postponed')
 				return true;
 		}
+		if (operation == 'call-pack') {
+			if (from !== 'postponed')
+				return false;
+		}
 		if (operation == 'restore')
 			if (from == 'expired' || from == 'removed')
 				return true;
