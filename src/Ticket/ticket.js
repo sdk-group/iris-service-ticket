@@ -135,29 +135,12 @@ class Ticket {
 					}))
 					return Promise.reject(new Error(`State change not allowed: ${old_state} => ${state}.`));
 				tick_data.state = state;
-				_.map(unlock, nm => {
-					_.unset(tick_data, ['locked_fields', nm]);
-				});
-				_.map(unset, v => {
-					let lock = _.get(tick_data, ['locked_fields', v], false);
-					if (!lock) {
-						_.set(tick_data, v, null);
-					} else {
-						tick_data[v] = lock;
-					}
-				});
-				tick_data = _.merge(tick_data, fields);
-				return this.iris.setTicket(tick_data);
-			})
-			.then((res) => {
-				// console.log("SET TICK RES", res);
-				if (!res[tick_data.id])
-					return Promise.reject(new Error(`Failed to change state: cannot save ticket.`));
-				tick_data.cas = res[tick_data.id].cas;
-				return {
+				return this.actionAlter({
 					ticket: tick_data,
-					success: true
-				};
+					fields,
+					unset,
+					unlock
+				});
 			})
 			.catch((err) => {
 				console.log("ERR CHANGE STATE", err.message);
@@ -169,6 +152,36 @@ class Ticket {
 			});
 	}
 
+
+	actionAlter({
+		ticket: tick_data,
+		fields = {},
+		unset = [],
+		unlock = []
+	}) {
+		_.map(unlock, nm => {
+			_.unset(tick_data, ['locked_fields', nm]);
+		});
+		_.map(unset, v => {
+			let lock = _.get(tick_data, ['locked_fields', v], false);
+			if (!lock) {
+				_.set(tick_data, v, null);
+			} else {
+				tick_data[v] = lock;
+			}
+		});
+		tick_data = _.merge(tick_data, fields);
+		return this.iris.setTicket(tick_data)
+			.then(res => {
+				if (!res[tick_data.id])
+					return Promise.reject(new Error(`Cannot save ticket.`));
+				tick_data.cas = res[tick_data.id].cas;
+				return {
+					ticket: tick_data,
+					success: true
+				};
+			});
+	}
 
 	actionByCode({
 		code
