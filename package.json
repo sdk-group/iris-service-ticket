@@ -57,6 +57,7 @@
 		"gulp": "^3.9.1",
 		"gulp-babel": "^6.1.2",
 		"lodash": "^4.16.1",
-		"resource-management-framework": "git+https://github.com/YuuKohaku/rmf-on-rdf.git"
+		"resource-management-framework": "git+https://github.com/YuuKohaku/rmf-on-rdf.git",
+		"patchwerk": "git+https://github.com/sdk-group/patchwerk.git"
 	}
 }

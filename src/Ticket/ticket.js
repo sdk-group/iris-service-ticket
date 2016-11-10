@@ -3,7 +3,7 @@
 
 let TicketApi = require('resource-management-framework')
 	.TicketApi;
-// let Patchwerk = require('patchwerk');
+let Patchwerk = require('patchwerk');
 
 
 class Ticket {
@@ -15,7 +15,7 @@ class Ticket {
 		this.iris = new TicketApi();
 		this.iris.initContent();
 
-		// this.patchwerk = Patchwerk(this.emitter);
+		this.patchwerk = Patchwerk(this.emitter);
 	}
 
 	launch() {
@@ -26,6 +26,7 @@ class Ticket {
 				event_name
 			}) => {
 				let to_join = ['ticket', event_name, org_addr, workstation];
+				console.log("TICKETEMITSTATE-------------------------------------------->\n", _.join(to_join, "."));
 				this.emitter.emit('broadcast', {
 					event: _.join(to_join, "."),
 					data: ticket
@@ -34,6 +35,7 @@ class Ticket {
 			return Promise.resolve(true);
 		}
 		//API
+
 	actionTicket({
 		query,
 		keys
@@ -44,9 +46,11 @@ class Ticket {
 		});
 	}
 
+
 	actionBasicPriorities() {
 		return this.iris.getBasicPriorities();
 	}
+
 
 	actionCanChangeState({
 		from,
@@ -111,6 +115,7 @@ class Ticket {
 				return false;
 		return !!allowed_transform[_.join([from, to], "=>")] && !allowed_transform[_.join(['*', to], "=>")];
 	}
+
 
 	actionChangeState({
 		ticket,
@@ -211,6 +216,38 @@ class Ticket {
 			});
 	}
 
+	_session({
+		ticket,
+		session
+	}) {
+		let getSessionId = session ? Promise.resolve(session) : this.patchwerk.get('Ticket', {
+				key: ticket
+			})
+			.then(tick => tick.get("session"));
+		return getSessionId.then(session_id => this.patchwerk.get("TicketSession", {
+			key: session
+		}));
+	}
+
+	actionSessionTickets({
+		ticket,
+		session,
+		serialize = true
+	}) {
+
+		return this._session({
+				ticket,
+				session
+			})
+			.then(session_obj => {
+				return Promise.map(session_obj.get("uses") || [], t_id =>
+					this.patchwerk.get('Ticket', {
+						key: t_id
+					}))
+			})
+			.then(tickets => serialize ? _.map(tickets, tick => tick.serialize()) : tickets);
+	}
+
 	actionById({
 		ticket
 	}) {
@@ -232,27 +269,25 @@ class Ticket {
 				reason,
 				ticket
 			}) => {
-				if (!success)
+				if (!success) {
 					return Promise.reject(new Error(reason));
+				}
 				tick = ticket;
 				let session = ticket.session;
-				return this.emitter.addTask('database.getMulti', {
-					args: [[session]]
-				});
-			})
-			.then((session) => {
-				return this.emitter.addTask('database.getMulti', {
-					args: [session[tick.session].value.uses]
+				return this.actionSessionTickets({
+					session,
+					serialize: false
 				});
 			})
 			.then(tickets => {
 				let fin_history = Array((tick.inheritance_counter || 0));
 				_.map(tickets, ticket => {
-					if (ticket.value.inherits == tick.id) {
-						fin_history[ticket.value.inheritance_level - 1] = ticket.value.history;
+					if (ticket.get("inherits") == tick.id) {
+						fin_history[ticket.get("inheritance_level") - 1] = ticket.get("history");
 					}
 				});
-				tick.history = tick.history.concat(_.flatten(fin_history));
+				let hst = tick.history;
+				tick.history = hst.concat(_.flatten(fin_history));
 
 				return {
 					ticket: tick,
@@ -260,6 +295,7 @@ class Ticket {
 				}
 			})
 			.catch((err) => {
+				console.log(err.stack);
 				return {
 					success: false,
 					reason: err.message
