@@ -245,7 +245,14 @@ class Ticket {
 						key: t_id
 					}))
 			})
-			.then(tickets => serialize ? _.map(tickets, tick => tick.serialize()) : tickets);
+			.then(tickets => ({
+				success: true,
+				tickets: serialize ? _.map(tickets, tick => tick.serialize()) : tickets
+			}))
+			.catch(err => ({
+				success: false,
+				reason: err.message
+			}));
 	}
 
 	actionById({
@@ -279,7 +286,9 @@ class Ticket {
 					serialize: false
 				});
 			})
-			.then(tickets => {
+			.then(({
+				tickets
+			}) => {
 				let fin_history = Array((tick.inheritance_counter || 0));
 				_.map(tickets, ticket => {
 					if (ticket.get("inherits") == tick.id) {
