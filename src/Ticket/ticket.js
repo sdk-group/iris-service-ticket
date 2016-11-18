@@ -225,7 +225,7 @@ class Ticket {
 			})
 			.then(tick => tick.get("session"));
 		return getSessionId.then(session_id => this.patchwerk.get("TicketSession", {
-			key: session
+			key: session_id
 		}));
 	}
 
