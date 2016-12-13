@@ -61,6 +61,7 @@ class Ticket {
 			"registered=>called": true,
 			"registered=>removed": true,
 			"registered=>registered": true,
+			"registered=>expired": true,
 			"postponed=>called": true,
 			"postponed=>registered": true,
 			"postponed=>removed": true,
@@ -108,11 +109,12 @@ class Ticket {
 			if (from !== 'postponed')
 				return false;
 		}
-		if (operation == 'restore')
+		if (operation == 'restore') {
 			if (from == 'expired' || from == 'removed')
 				return true;
 			else
 				return false;
+		}
 		return !!allowed_transform[_.join([from, to], "=>")] && !allowed_transform[_.join(['*', to], "=>")];
 	}
 
