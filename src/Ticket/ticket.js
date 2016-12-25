@@ -115,6 +115,12 @@ class Ticket {
 			else
 				return false;
 		}
+		if (operation == 'return') {
+			if (from == 'postponed')
+				return true;
+			else
+				return false;
+		}
 		return !!allowed_transform[_.join([from, to], "=>")] && !allowed_transform[_.join(['*', to], "=>")];
 	}
 
