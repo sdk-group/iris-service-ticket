@@ -221,10 +221,10 @@ class Ticket {
 
 				return this.patchwerk.get("TicketSession", {
 					key: session_id
-				}));
+				});
 			}).then(session => {
 				let last = _.tail(session.uses);
-				
+
 				return this.iris.getTicket({
 					keys: last
 				});
