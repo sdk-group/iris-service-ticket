@@ -217,6 +217,26 @@ class Ticket {
 					};
 				}
 
+				let session =  ticket.session;
+
+				return this.patchwerk.get("TicketSession", {
+					key: session_id
+				}));
+			}).then(session => {
+				let last = _.tail(session.uses);
+				
+				return this.iris.getTicket({
+					keys: last
+				});
+			}).then(tickets => {
+				let ticket = _.head(_.values(tickets));
+				if (!ticket) {
+					return {
+						success: false,
+						reason: "Ticket not found"
+					};
+				}
+
 				return {
 					ticket: ticket,
 					success: true
