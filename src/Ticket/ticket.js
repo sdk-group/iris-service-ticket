@@ -217,11 +217,9 @@ class Ticket {
 					};
 				}
 
-				let session =  ticket.session;
+				let key =  ticket.session;
 
-				return this.patchwerk.get("TicketSession", {
-					key: session_id
-				});
+				return this.patchwerk.get("TicketSession", {key});
 			}).then(session => {
 				let last = _.tail(session.uses);
 
